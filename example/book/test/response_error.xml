@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:Envelope xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.iata.org/IATA/EDIST">
+  <ns2:Body>
+    <ns3:OrderViewRS Version="">
+      <ns3:Document>
+        <ns3:Name>1.0</ns3:Name>
+      </ns3:Document>
+      <ns3:Errors>
+        <ns3:Error Type="101" Status="Incomplete" Owner="S7 NDC API">Date property departure_date have to be a present or future date</ns3:Error>
+        <ns3:Error Type="101" Status="Incomplete" Owner="S7 NDC API">Date property departure_date have to be a present or future date</ns3:Error>
+        <ns3:Error Type="MSG">System validation error. Please, check your request</ns3:Error>
+        <ns3:Error Type="101" ShortText="NN1 UNABLE" Code="101"/>
+      </ns3:Errors>
+    </ns3:OrderViewRS>
+  </ns2:Body>
+</ns2:Envelope>

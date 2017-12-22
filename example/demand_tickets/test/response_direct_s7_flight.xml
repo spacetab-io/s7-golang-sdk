@@ -1,0 +1,163 @@
+<ns2:Envelope xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.iata.org/IATA/EDIST">
+  <ns2:Body>
+    <ns3:AirDocDisplayRS Version="">
+      <ns3:Document>
+        <ns3:Name>1.0</ns3:Name>
+      </ns3:Document>
+      <ns3:Success/>
+      <ns3:Response>
+        <ns3:TicketDocInfos>
+          <ns3:TicketDocInfo>
+            <ns3:Traveler>
+              <ns3:Surname>TREFILOV</ns3:Surname>
+              <ns3:Given>DANILALEXANDROVICHMR</ns3:Given>
+              <ns3:PTC>ADT</ns3:PTC>
+            </ns3:Traveler>
+            <ns3:IssuingAirlineInfo>
+              <ns3:AirlineName>S7</ns3:AirlineName>
+            </ns3:IssuingAirlineInfo>
+            <ns3:BookingReferences>
+              <ns3:BookingReference>
+                <ns3:ID>SRFLN</ns3:ID>
+                <ns3:AirlineID>S7</ns3:AirlineID>
+              </ns3:BookingReference>
+            </ns3:BookingReferences>
+            <ns3:Payments>
+              <ns3:Payment>
+                <ns3:Method/>
+                <ns3:Amount Code="RUB">30587</ns3:Amount>
+              </ns3:Payment>
+            </ns3:Payments>
+            <ns3:OriginDestination>
+              <ns3:Origin>DME</ns3:Origin>
+              <ns3:Destination>DME</ns3:Destination>
+            </ns3:OriginDestination>
+            <ns3:FareInfo>
+              <ns3:BaseFare>
+                <ns3:Amount Code="RUB">27265</ns3:Amount>
+              </ns3:BaseFare>
+              <ns3:Total>
+                <ns3:Amount Code="RUB">30587</ns3:Amount>
+              </ns3:Total>
+              <ns3:Taxes>
+                <ns3:Total Code="RUB">3322</ns3:Total>
+                <ns3:Breakdown>
+                  <ns3:Tax>
+                    <ns3:Amount Code="RUB">1536</ns3:Amount>
+                    <ns3:TaxCode>YR</ns3:TaxCode>
+                  </ns3:Tax>
+                  <ns3:Tax>
+                    <ns3:Amount Code="RUB">285</ns3:Amount>
+                    <ns3:TaxCode>B8</ns3:TaxCode>
+                  </ns3:Tax>
+                  <ns3:Tax>
+                    <ns3:Amount Code="RUB">252</ns3:Amount>
+                    <ns3:TaxCode>WH</ns3:TaxCode>
+                  </ns3:Tax>
+                  <ns3:Tax>
+                    <ns3:Amount Code="RUB">252</ns3:Amount>
+                    <ns3:TaxCode>WH</ns3:TaxCode>
+                  </ns3:Tax>
+                  <ns3:Tax>
+                    <ns3:Amount Code="RUB">670</ns3:Amount>
+                    <ns3:TaxCode>WI</ns3:TaxCode>
+                  </ns3:Tax>
+                  <ns3:Tax>
+                    <ns3:Amount Code="RUB">327</ns3:Amount>
+                    <ns3:TaxCode>WJ</ns3:TaxCode>
+                  </ns3:Tax>
+                </ns3:Breakdown>
+              </ns3:Taxes>
+              <ns3:UnstructuredFareCalcInfo>
+                <ns3:Info>MOW S7 MSQ45.50S7 MOW45.50NUC91.00END ROE0.944989</ns3:Info>
+              </ns3:UnstructuredFareCalcInfo>
+            </ns3:FareInfo>
+            <ns3:TicketDocument>
+              <ns3:TicketDocNbr>2411121988</ns3:TicketDocNbr>
+              <ns3:Type>
+                <ns3:Code>702</ns3:Code>
+              </ns3:Type>
+              <ns3:NumberofBooklets>1</ns3:NumberofBooklets>
+              <ns3:DateOfIssue>2017-06-14</ns3:DateOfIssue>
+              <ns3:CouponInfo>
+                <ns3:CouponNumber>1</ns3:CouponNumber>
+                <ns3:FareBasisCode>
+                  <ns3:Code>DFLRTCS</ns3:Code>
+                </ns3:FareBasisCode>
+                <ns3:CouponValid>
+                  <ns3:EffectiveDatePeriod>
+                    <ns3:Expiration>2018-08-14</ns3:Expiration>
+                  </ns3:EffectiveDatePeriod>
+                </ns3:CouponValid>
+                <ns3:Status>
+                  <ns3:Code>OA CONTROL</ns3:Code>
+                </ns3:Status>
+                <ns3:SoldAirlineInfo>
+                  <ns3:Departure>
+                    <ns3:AirportCode>DME</ns3:AirportCode>
+                    <ns3:Date>2017-08-24</ns3:Date>
+                    <ns3:Time>05:40</ns3:Time>
+                  </ns3:Departure>
+                  <ns3:Arrival>
+                    <ns3:AirportCode>MSQ</ns3:AirportCode>
+                  </ns3:Arrival>
+                  <ns3:OperatingCarrier>
+                    <ns3:ResBookDesigCode>D</ns3:ResBookDesigCode>
+                  </ns3:OperatingCarrier>
+                  <ns3:MarketingCarrier>
+                    <ns3:AirlineID>S7</ns3:AirlineID>
+                    <ns3:FlightNumber>4431</ns3:FlightNumber>
+                  </ns3:MarketingCarrier>
+                  <ns3:TicketedBaggageAllowance>
+                    <ns3:AllowableBag Type="K" Number="30"/>
+                  </ns3:TicketedBaggageAllowance>
+                </ns3:SoldAirlineInfo>
+              </ns3:CouponInfo>
+              <ns3:CouponInfo>
+                <ns3:CouponNumber>2</ns3:CouponNumber>
+                <ns3:FareBasisCode>
+                  <ns3:Code>DFLRTCS</ns3:Code>
+                </ns3:FareBasisCode>
+                <ns3:CouponValid>
+                  <ns3:EffectiveDatePeriod>
+                    <ns3:Expiration>2018-08-14</ns3:Expiration>
+                  </ns3:EffectiveDatePeriod>
+                </ns3:CouponValid>
+                <ns3:Status>
+                  <ns3:Code>OA CONTROL</ns3:Code>
+                </ns3:Status>
+                <ns3:SoldAirlineInfo>
+                  <ns3:Departure>
+                    <ns3:AirportCode>MSQ</ns3:AirportCode>
+                    <ns3:Date>2017-08-31</ns3:Date>
+                    <ns3:Time>06:45</ns3:Time>
+                  </ns3:Departure>
+                  <ns3:Arrival>
+                    <ns3:AirportCode>DME</ns3:AirportCode>
+                  </ns3:Arrival>
+                  <ns3:OperatingCarrier>
+                    <ns3:ResBookDesigCode>D</ns3:ResBookDesigCode>
+                  </ns3:OperatingCarrier>
+                  <ns3:MarketingCarrier>
+                    <ns3:AirlineID>S7</ns3:AirlineID>
+                    <ns3:FlightNumber>4434</ns3:FlightNumber>
+                  </ns3:MarketingCarrier>
+                  <ns3:TicketedBaggageAllowance>
+                    <ns3:AllowableBag Type="K" Number="30"/>
+                  </ns3:TicketedBaggageAllowance>
+                </ns3:SoldAirlineInfo>
+              </ns3:CouponInfo>
+            </ns3:TicketDocument>
+            <ns3:Commission>
+              <ns3:Amount>0</ns3:Amount>
+              <ns3:Remarks>
+                <ns3:Remark>S7 ONLY/REF/CHNG/RESTR/</ns3:Remark>
+              </ns3:Remarks>
+            </ns3:Commission>
+            <ns3:PassengerSpecificData>111111111</ns3:PassengerSpecificData>
+          </ns3:TicketDocInfo>
+        </ns3:TicketDocInfos>
+      </ns3:Response>
+    </ns3:AirDocDisplayRS>
+  </ns2:Body>
+</ns2:Envelope>

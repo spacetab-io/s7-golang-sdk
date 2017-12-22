@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:Envelope xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.iata.org/IATA/EDIST">
+  <ns2:Body>
+    <ns3:ItinReshopRS Version="">
+      <ns3:Document>
+        <ns3:Name>1.0</ns3:Name>
+      </ns3:Document>
+      <ns3:Success/>
+      <ns3:Response>
+        <ns3:ItinReshopProcessing/>
+        <ns3:Passengers>
+          <ns3:Passenger ObjectKey="SH1">
+            <ns3:PTC Quantity="1">INF</ns3:PTC>
+            <ns3:Name>
+              <ns3:Surname>Anonymous</ns3:Surname>
+            </ns3:Name>
+          </ns3:Passenger>
+          <ns3:Passenger ObjectKey="SH2">
+            <ns3:PTC Quantity="1">ADT</ns3:PTC>
+            <ns3:Name>
+              <ns3:Surname>Anonymous</ns3:Surname>
+            </ns3:Name>
+          </ns3:Passenger>
+          <ns3:Passenger ObjectKey="SH3">
+            <ns3:PTC Quantity="1">CHD</ns3:PTC>
+            <ns3:Name>
+              <ns3:Surname>Anonymous</ns3:Surname>
+            </ns3:Name>
+          </ns3:Passenger>
+        </ns3:Passengers>
+        <ns3:Order>
+          <ns3:OrderID Owner="S7">Order</ns3:OrderID>
+          <ns3:OrderItems>
+            <ns3:OrderItem>
+              <ns3:OrderItemID Owner="S7">OrderItem</ns3:OrderItemID>
+              <ns3:FlightItem>
+                <ns3:OriginDestination>
+                  <ns3:Flight refs="RO1 RO2 RO3">
+                    <ns3:SegmentKey>SG1</ns3:SegmentKey>
+                    <ns3:Departure>
+                      <ns3:AirportCode>DME</ns3:AirportCode>
+                      <ns3:Date>2018-09-16</ns3:Date>
+                      <ns3:Time>00:00</ns3:Time>
+                    </ns3:Departure>
+                    <ns3:Arrival>
+                      <ns3:AirportCode>MUC</ns3:AirportCode>
+                      <ns3:Date>2018-09-16</ns3:Date>
+                      <ns3:Time>00:00</ns3:Time>
+                    </ns3:Arrival>
+                    <ns3:MarketingCarrier>
+                      <ns3:AirlineID>S7</ns3:AirlineID>
+                      <ns3:FlightNumber>797</ns3:FlightNumber>
+                    </ns3:MarketingCarrier>
+                    <ns3:ClassOfService>
+                      <ns3:Code>Q</ns3:Code>
+                    </ns3:ClassOfService>
+                  </ns3:Flight>
+                </ns3:OriginDestination>
+                <ns3:OriginDestination>
+                  <ns3:Flight refs="RO1 RO2 RO3">
+                    <ns3:SegmentKey>SG2</ns3:SegmentKey>
+                    <ns3:Departure>
+                      <ns3:AirportCode>MUC</ns3:AirportCode>
+                      <ns3:Date>2018-09-17</ns3:Date>
+                      <ns3:Time>00:00</ns3:Time>
+                    </ns3:Departure>
+                    <ns3:Arrival>
+                      <ns3:AirportCode>HAM</ns3:AirportCode>
+                      <ns3:Date>2018-09-17</ns3:Date>
+                      <ns3:Time>00:00</ns3:Time>
+                    </ns3:Arrival>
+                    <ns3:MarketingCarrier>
+                      <ns3:AirlineID>LH</ns3:AirlineID>
+                      <ns3:FlightNumber>2070</ns3:FlightNumber>
+                    </ns3:MarketingCarrier>
+                    <ns3:ClassOfService>
+                      <ns3:Code>V</ns3:Code>
+                    </ns3:ClassOfService>
+                  </ns3:Flight>
+                </ns3:OriginDestination>
+              </ns3:FlightItem>
+            </ns3:OrderItem>
+          </ns3:OrderItems>
+        </ns3:Order>
+        <ns3:ReShopOffers>
+          <ns3:ReShopOffer ObjectKey="RO1">
+            <ns3:OfferID Owner="S7">Offer</ns3:OfferID>
+            <ns3:ReShopPricedOffer>
+              <ns3:OfferPrice>
+                <ns3:RequestedDate>
+                  <ns3:PriceDetail>
+                    <ns3:BaseAmount Code="RUB">1190</ns3:BaseAmount>
+                    <ns3:FareFiledIn>
+                      <ns3:BaseAmount Code="EUR">17.00</ns3:BaseAmount>
+                      <ns3:ExchangeRate>70.0</ns3:ExchangeRate>
+                    </ns3:FareFiledIn>
+                    <ns3:Taxes>
+                      <ns3:Total Code="RUB">0</ns3:Total>
+                    </ns3:Taxes>
+                  </ns3:PriceDetail>
+                  <ns3:Associations>
+                    <ns3:AssociatedTraveler>
+                      <ns3:TravelerReferences>SH1</ns3:TravelerReferences>
+                    </ns3:AssociatedTraveler>
+                    <ns3:ApplicableFlight>
+                      <ns3:FlightSegmentReference>
+                        <ns3:ClassOfService>
+                          <ns3:Code>V</ns3:Code>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG1 BG2</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                    </ns3:ApplicableFlight>
+                    <ns3:OfferDetailAssociation>
+                      <ns3:OfferTermReferences>T1 T2</ns3:OfferTermReferences>
+                    </ns3:OfferDetailAssociation>
+                  </ns3:Associations>
+                </ns3:RequestedDate>
+                <ns3:FareDetail>
+                  <ns3:FareComponent>
+                    <ns3:SegmentReference>SG1</ns3:SegmentReference>
+                    <ns3:FareBasis>
+                      <ns3:FareBasisCode>
+                        <ns3:Code>QLHMUCV</ns3:Code>
+                      </ns3:FareBasisCode>
+                    </ns3:FareBasis>
+                    <ns3:TicketDesig Application="IN">90</ns3:TicketDesig>
+                    <ns3:FareRules>
+                      <ns3:Ticketing>
+                        <ns3:Endorsements>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                        </ns3:Endorsements>
+                      </ns3:Ticketing>
+                      <ns3:Remarks>
+                        <ns3:Remark>mow s7 x/muc lh ham20.32nuc20.32end roe0.836252</ns3:Remark>
+                      </ns3:Remarks>
+                    </ns3:FareRules>
+                  </ns3:FareComponent>
+                  <ns3:FareComponent>
+                    <ns3:SegmentReference>SG2</ns3:SegmentReference>
+                    <ns3:FareBasis>
+                      <ns3:FareBasisCode>
+                        <ns3:Code>QLHMUCV</ns3:Code>
+                      </ns3:FareBasisCode>
+                    </ns3:FareBasis>
+                    <ns3:TicketDesig Application="IN">90</ns3:TicketDesig>
+                    <ns3:FareRules>
+                      <ns3:Ticketing>
+                        <ns3:Endorsements>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                        </ns3:Endorsements>
+                      </ns3:Ticketing>
+                      <ns3:Remarks>
+                        <ns3:Remark>mow s7 x/muc lh ham20.32nuc20.32end roe0.836252</ns3:Remark>
+                      </ns3:Remarks>
+                    </ns3:FareRules>
+                  </ns3:FareComponent>
+                </ns3:FareDetail>
+              </ns3:OfferPrice>
+            </ns3:ReShopPricedOffer>
+          </ns3:ReShopOffer>
+          <ns3:ReShopOffer ObjectKey="RO2">
+            <ns3:OfferID Owner="S7">Offer</ns3:OfferID>
+            <ns3:ReShopPricedOffer>
+              <ns3:OfferPrice>
+                <ns3:RequestedDate>
+                  <ns3:PriceDetail>
+                    <ns3:BaseAmount Code="RUB">11900</ns3:BaseAmount>
+                    <ns3:FareFiledIn>
+                      <ns3:BaseAmount Code="EUR">170.00</ns3:BaseAmount>
+                      <ns3:ExchangeRate>70.0</ns3:ExchangeRate>
+                    </ns3:FareFiledIn>
+                    <ns3:Taxes>
+                      <ns3:Total Code="RUB">5856</ns3:Total>
+                      <ns3:Breakdown>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">1750</ns3:Amount>
+                          <ns3:TaxCode>YQ</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">1540</ns3:Amount>
+                          <ns3:TaxCode>YR</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">514</ns3:Amount>
+                          <ns3:TaxCode>DE</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">523</ns3:Amount>
+                          <ns3:TaxCode>OY</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">1524</ns3:Amount>
+                          <ns3:TaxCode>RD</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">5</ns3:Amount>
+                          <ns3:TaxCode>RD</ns3:TaxCode>
+                        </ns3:Tax>
+                      </ns3:Breakdown>
+                    </ns3:Taxes>
+                  </ns3:PriceDetail>
+                  <ns3:Associations>
+                    <ns3:AssociatedTraveler>
+                      <ns3:TravelerReferences>SH2</ns3:TravelerReferences>
+                    </ns3:AssociatedTraveler>
+                    <ns3:ApplicableFlight>
+                      <ns3:FlightSegmentReference>
+                        <ns3:ClassOfService>
+                          <ns3:Code>V</ns3:Code>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG3 BG4</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                    </ns3:ApplicableFlight>
+                    <ns3:OfferDetailAssociation>
+                      <ns3:OfferTermReferences>T3 T4</ns3:OfferTermReferences>
+                    </ns3:OfferDetailAssociation>
+                  </ns3:Associations>
+                </ns3:RequestedDate>
+                <ns3:FareDetail>
+                  <ns3:FareComponent>
+                    <ns3:SegmentReference>SG1</ns3:SegmentReference>
+                    <ns3:FareBasis>
+                      <ns3:FareBasisCode>
+                        <ns3:Code>QLHMUCV</ns3:Code>
+                      </ns3:FareBasisCode>
+                    </ns3:FareBasis>
+                    <ns3:FareRules>
+                      <ns3:Ticketing>
+                        <ns3:Endorsements>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                        </ns3:Endorsements>
+                      </ns3:Ticketing>
+                      <ns3:Remarks>
+                        <ns3:Remark>mow s7 x/muc lh ham203.28nuc203.28end roe0.836252</ns3:Remark>
+                      </ns3:Remarks>
+                    </ns3:FareRules>
+                  </ns3:FareComponent>
+                  <ns3:FareComponent>
+                    <ns3:SegmentReference>SG2</ns3:SegmentReference>
+                    <ns3:FareBasis>
+                      <ns3:FareBasisCode>
+                        <ns3:Code>QLHMUCV</ns3:Code>
+                      </ns3:FareBasisCode>
+                    </ns3:FareBasis>
+                    <ns3:FareRules>
+                      <ns3:Ticketing>
+                        <ns3:Endorsements>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                        </ns3:Endorsements>
+                      </ns3:Ticketing>
+                      <ns3:Remarks>
+                        <ns3:Remark>mow s7 x/muc lh ham203.28nuc203.28end roe0.836252</ns3:Remark>
+                      </ns3:Remarks>
+                    </ns3:FareRules>
+                  </ns3:FareComponent>
+                </ns3:FareDetail>
+              </ns3:OfferPrice>
+            </ns3:ReShopPricedOffer>
+          </ns3:ReShopOffer>
+          <ns3:ReShopOffer ObjectKey="RO3">
+            <ns3:OfferID Owner="S7">Offer</ns3:OfferID>
+            <ns3:ReShopPricedOffer>
+              <ns3:OfferPrice>
+                <ns3:RequestedDate>
+                  <ns3:PriceDetail>
+                    <ns3:BaseAmount Code="RUB">8960</ns3:BaseAmount>
+                    <ns3:FareFiledIn>
+                      <ns3:BaseAmount Code="EUR">128.00</ns3:BaseAmount>
+                      <ns3:ExchangeRate>70.0</ns3:ExchangeRate>
+                    </ns3:FareFiledIn>
+                    <ns3:Taxes>
+                      <ns3:Total Code="RUB">5856</ns3:Total>
+                      <ns3:Breakdown>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">1750</ns3:Amount>
+                          <ns3:TaxCode>YQ</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">1540</ns3:Amount>
+                          <ns3:TaxCode>YR</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">514</ns3:Amount>
+                          <ns3:TaxCode>DE</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">523</ns3:Amount>
+                          <ns3:TaxCode>OY</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">1524</ns3:Amount>
+                          <ns3:TaxCode>RD</ns3:TaxCode>
+                        </ns3:Tax>
+                        <ns3:Tax>
+                          <ns3:Amount Code="RUB">5</ns3:Amount>
+                          <ns3:TaxCode>RD</ns3:TaxCode>
+                        </ns3:Tax>
+                      </ns3:Breakdown>
+                    </ns3:Taxes>
+                  </ns3:PriceDetail>
+                  <ns3:Associations>
+                    <ns3:AssociatedTraveler>
+                      <ns3:TravelerReferences>SH3</ns3:TravelerReferences>
+                    </ns3:AssociatedTraveler>
+                    <ns3:ApplicableFlight>
+                      <ns3:FlightSegmentReference>
+                        <ns3:ClassOfService>
+                          <ns3:Code>V</ns3:Code>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG5 BG6</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                    </ns3:ApplicableFlight>
+                    <ns3:OfferDetailAssociation>
+                      <ns3:OfferTermReferences>T5 T6</ns3:OfferTermReferences>
+                    </ns3:OfferDetailAssociation>
+                  </ns3:Associations>
+                </ns3:RequestedDate>
+                <ns3:FareDetail>
+                  <ns3:FareComponent>
+                    <ns3:SegmentReference>SG1</ns3:SegmentReference>
+                    <ns3:FareBasis>
+                      <ns3:FareBasisCode>
+                        <ns3:Code>QLHMUCV</ns3:Code>
+                      </ns3:FareBasisCode>
+                    </ns3:FareBasis>
+                    <ns3:TicketDesig Application="CH">25</ns3:TicketDesig>
+                    <ns3:FareRules>
+                      <ns3:Ticketing>
+                        <ns3:Endorsements>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                        </ns3:Endorsements>
+                      </ns3:Ticketing>
+                      <ns3:Remarks>
+                        <ns3:Remark>mow s7 x/muc lh ham152.46nuc152.46end roe0.836252</ns3:Remark>
+                      </ns3:Remarks>
+                    </ns3:FareRules>
+                  </ns3:FareComponent>
+                  <ns3:FareComponent>
+                    <ns3:SegmentReference>SG2</ns3:SegmentReference>
+                    <ns3:FareBasis>
+                      <ns3:FareBasisCode>
+                        <ns3:Code>QLHMUCV</ns3:Code>
+                      </ns3:FareBasisCode>
+                    </ns3:FareBasis>
+                    <ns3:TicketDesig Application="CH">25</ns3:TicketDesig>
+                    <ns3:FareRules>
+                      <ns3:Ticketing>
+                        <ns3:Endorsements>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                          <ns3:Endorsement>nend/ref30eur/ns80eur</ns3:Endorsement>
+                        </ns3:Endorsements>
+                      </ns3:Ticketing>
+                      <ns3:Remarks>
+                        <ns3:Remark>mow s7 x/muc lh ham152.46nuc152.46end roe0.836252</ns3:Remark>
+                      </ns3:Remarks>
+                    </ns3:FareRules>
+                  </ns3:FareComponent>
+                </ns3:FareDetail>
+              </ns3:OfferPrice>
+            </ns3:ReShopPricedOffer>
+          </ns3:ReShopOffer>
+        </ns3:ReShopOffers>
+        <ns3:DataList>
+          <ns3:CheckedBagAllowanceList>
+            <ns3:CheckedBagAllowance refs="SG1" ListKey="BG1">
+              <ns3:PieceAllowance>
+                <ns3:ApplicableParty>Traveller</ns3:ApplicableParty>
+                <ns3:TotalQuantity>1</ns3:TotalQuantity>
+                <ns3:Descriptions>
+                  <ns3:Description>
+                    <ns3:Text>1PC</ns3:Text>
+                  </ns3:Description>
+                </ns3:Descriptions>
+                <ns3:PieceMeasurements Quantity="1"/>
+              </ns3:PieceAllowance>
+            </ns3:CheckedBagAllowance>
+            <ns3:CheckedBagAllowance refs="SG2" ListKey="BG2">
+              <ns3:PieceAllowance>
+                <ns3:ApplicableParty>Traveller</ns3:ApplicableParty>
+                <ns3:TotalQuantity>1</ns3:TotalQuantity>
+                <ns3:Descriptions>
+                  <ns3:Description>
+                    <ns3:Text>1PC</ns3:Text>
+                  </ns3:Description>
+                </ns3:Descriptions>
+                <ns3:PieceMeasurements Quantity="1"/>
+              </ns3:PieceAllowance>
+            </ns3:CheckedBagAllowance>
+            <ns3:CheckedBagAllowance refs="SG1" ListKey="BG3">
+              <ns3:PieceAllowance>
+                <ns3:ApplicableParty>Traveller</ns3:ApplicableParty>
+                <ns3:TotalQuantity>1</ns3:TotalQuantity>
+                <ns3:Descriptions>
+                  <ns3:Description>
+                    <ns3:Text>1PC</ns3:Text>
+                  </ns3:Description>
+                </ns3:Descriptions>
+                <ns3:PieceMeasurements Quantity="1"/>
+              </ns3:PieceAllowance>
+            </ns3:CheckedBagAllowance>
+            <ns3:CheckedBagAllowance refs="SG2" ListKey="BG4">
+              <ns3:PieceAllowance>
+                <ns3:ApplicableParty>Traveller</ns3:ApplicableParty>
+                <ns3:TotalQuantity>1</ns3:TotalQuantity>
+                <ns3:Descriptions>
+                  <ns3:Description>
+                    <ns3:Text>1PC</ns3:Text>
+                  </ns3:Description>
+                </ns3:Descriptions>
+                <ns3:PieceMeasurements Quantity="1"/>
+              </ns3:PieceAllowance>
+            </ns3:CheckedBagAllowance>
+            <ns3:CheckedBagAllowance refs="SG1" ListKey="BG5">
+              <ns3:PieceAllowance>
+                <ns3:ApplicableParty>Traveller</ns3:ApplicableParty>
+                <ns3:TotalQuantity>1</ns3:TotalQuantity>
+                <ns3:Descriptions>
+                  <ns3:Description>
+                    <ns3:Text>1PC</ns3:Text>
+                  </ns3:Description>
+                </ns3:Descriptions>
+                <ns3:PieceMeasurements Quantity="1"/>
+              </ns3:PieceAllowance>
+            </ns3:CheckedBagAllowance>
+            <ns3:CheckedBagAllowance refs="SG2" ListKey="BG6">
+              <ns3:PieceAllowance>
+                <ns3:ApplicableParty>Traveller</ns3:ApplicableParty>
+                <ns3:TotalQuantity>1</ns3:TotalQuantity>
+                <ns3:Descriptions>
+                  <ns3:Description>
+                    <ns3:Text>1PC</ns3:Text>
+                  </ns3:Description>
+                </ns3:Descriptions>
+                <ns3:PieceMeasurements Quantity="1"/>
+              </ns3:PieceAllowance>
+            </ns3:CheckedBagAllowance>
+          </ns3:CheckedBagAllowanceList>
+          <ns3:TermsList ListKey="TL1">
+            <ns3:Term refs="SG1" ObjectKey="T1">
+              <ns3:AvailablePeriod>
+                <ns3:Earliest/>
+                <ns3:Latest/>
+              </ns3:AvailablePeriod>
+            </ns3:Term>
+            <ns3:Term refs="SG2" ObjectKey="T2">
+              <ns3:AvailablePeriod>
+                <ns3:Earliest/>
+                <ns3:Latest/>
+              </ns3:AvailablePeriod>
+            </ns3:Term>
+            <ns3:Term refs="SG1" ObjectKey="T3">
+              <ns3:AvailablePeriod>
+                <ns3:Earliest/>
+                <ns3:Latest/>
+              </ns3:AvailablePeriod>
+            </ns3:Term>
+            <ns3:Term refs="SG2" ObjectKey="T4">
+              <ns3:AvailablePeriod>
+                <ns3:Earliest/>
+                <ns3:Latest/>
+              </ns3:AvailablePeriod>
+            </ns3:Term>
+            <ns3:Term refs="SG1" ObjectKey="T5">
+              <ns3:AvailablePeriod>
+                <ns3:Earliest/>
+                <ns3:Latest/>
+              </ns3:AvailablePeriod>
+            </ns3:Term>
+            <ns3:Term refs="SG2" ObjectKey="T6">
+              <ns3:AvailablePeriod>
+                <ns3:Earliest/>
+                <ns3:Latest/>
+              </ns3:AvailablePeriod>
+            </ns3:Term>
+          </ns3:TermsList>
+        </ns3:DataList>
+      </ns3:Response>
+    </ns3:ItinReshopRS>
+  </ns2:Body>
+</ns2:Envelope>

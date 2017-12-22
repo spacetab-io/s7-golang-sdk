@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:Envelope xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.iata.org/IATA/EDIST">
+  <ns2:Body>
+    <ns3:OrderViewRS Version="">
+      <ns3:Document>
+        <ns3:Name>1.0</ns3:Name>
+      </ns3:Document>
+      <ns3:Success/>
+      <ns3:Response>
+        <ns3:OrderViewProcessing/>
+        <ns3:Passengers>
+          <ns3:Passenger ObjectKey="SH1">
+            <ns3:PTC Quantity="1">ADT</ns3:PTC>
+            <ns3:Age>
+              <ns3:BirthDate>1991-10-10</ns3:BirthDate>
+            </ns3:Age>
+            <ns3:Name>
+              <ns3:Surname>TREFILOV</ns3:Surname>
+              <ns3:Given>DANIL</ns3:Given>
+              <ns3:Title>MR</ns3:Title>
+              <ns3:Middle>ALEXANDROVICH</ns3:Middle>
+            </ns3:Name>
+            <ns3:Contacts>
+              <ns3:Contact>
+                <ns3:EmailContact>
+                  <ns3:Address>TEST.TEST@S7.RU</ns3:Address>
+                </ns3:EmailContact>
+                <ns3:PhoneContact>
+                  <ns3:Number>79999999999</ns3:Number>
+                </ns3:PhoneContact>
+              </ns3:Contact>
+            </ns3:Contacts>
+            <ns3:FQTVs>
+              <ns3:TravelerFQTV_Information>
+                <ns3:AirlineID>S7</ns3:AirlineID>
+                <ns3:Account>
+                  <ns3:Number>S7612966192</ns3:Number>
+                </ns3:Account>
+                <ns3:ProgramID>S7</ns3:ProgramID>
+              </ns3:TravelerFQTV_Information>
+            </ns3:FQTVs>
+            <ns3:Gender>Male</ns3:Gender>
+            <ns3:PassengerIDInfo>
+              <ns3:PassengerDocument>
+                <ns3:Type>PP</ns3:Type>
+                <ns3:ID>111111111</ns3:ID>
+                <ns3:BirthCountry>RU</ns3:BirthCountry>
+                <ns3:DateOfExpiration>2021-10-10</ns3:DateOfExpiration>
+                <ns3:CountryOfResidence>RU</ns3:CountryOfResidence>
+              </ns3:PassengerDocument>
+            </ns3:PassengerIDInfo>
+          </ns3:Passenger>
+        </ns3:Passengers>
+        <ns3:Order>
+          <ns3:OrderID Owner="S7">1</ns3:OrderID>
+          <ns3:BookingReferences>
+            <ns3:BookingReference>
+              <ns3:ID>SREP5</ns3:ID>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+            </ns3:BookingReference>
+          </ns3:BookingReferences>
+          <ns3:TimeLimits>
+            <ns3:PaymentTimeLimit DateTime="2017-06-16T16:58:00"/>
+          </ns3:TimeLimits>
+          <ns3:OrderItems>
+            <ns3:OrderItem>
+              <ns3:FlightItem>
+                <ns3:OriginDestination>
+                  <ns3:Flight>
+                    <ns3:SegmentKey>FL1</ns3:SegmentKey>
+                    <ns3:Status>
+                      <ns3:StatusCode>
+                        <ns3:Code>HK</ns3:Code>
+                      </ns3:StatusCode>
+                    </ns3:Status>
+                    <ns3:Departure>
+                      <ns3:AirportCode>SLY</ns3:AirportCode>
+                      <ns3:Date>2017-08-31</ns3:Date>
+                      <ns3:Time>14:30</ns3:Time>
+                    </ns3:Departure>
+                    <ns3:Arrival>
+                      <ns3:AirportCode>OVB</ns3:AirportCode>
+                      <ns3:Date>2017-08-31</ns3:Date>
+                      <ns3:Time>21:30</ns3:Time>
+                    </ns3:Arrival>
+                    <ns3:MarketingCarrier>
+                      <ns3:AirlineID>S7</ns3:AirlineID>
+                      <ns3:FlightNumber>3028</ns3:FlightNumber>
+                    </ns3:MarketingCarrier>
+                    <ns3:OperatingCarrier>
+                      <ns3:AirlineID>S7</ns3:AirlineID>
+                      <ns3:FlightNumber>3028</ns3:FlightNumber>
+                    </ns3:OperatingCarrier>
+                    <ns3:CabinType>
+                      <ns3:Code>ECONOMY</ns3:Code>
+                    </ns3:CabinType>
+                    <ns3:ClassOfService>
+                      <ns3:Code SeatsLeft="1">M</ns3:Code>
+                    </ns3:ClassOfService>
+                  </ns3:Flight>
+                </ns3:OriginDestination>
+              </ns3:FlightItem>
+              <ns3:Associations>
+                <ns3:Passengers>
+                  <ns3:PassengerReferences>SH1</ns3:PassengerReferences>
+                </ns3:Passengers>
+              </ns3:Associations>
+            </ns3:OrderItem>
+          </ns3:OrderItems>
+        </ns3:Order>
+      </ns3:Response>
+    </ns3:OrderViewRS>
+  </ns2:Body>
+</ns2:Envelope>
+

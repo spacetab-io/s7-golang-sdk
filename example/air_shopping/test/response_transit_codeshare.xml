@@ -1,0 +1,1398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:Envelope xmlns:ns2="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns3="http://www.iata.org/IATA/EDIST">
+  <ns2:Body>
+    <ns3:AirShoppingRS Version="">
+      <ns3:Document>
+        <ns3:Name>1.0</ns3:Name>
+      </ns3:Document>
+      <ns3:Success/>
+      <ns3:AirShoppingProcessing/>
+      <ns3:ShoppingResponseIDs>
+        <ns3:ResponseID>OPt0RmYkftg9ub09NWHd4dZl5</ns3:ResponseID>
+      </ns3:ShoppingResponseIDs>
+      <ns3:OffersGroup>
+        <ns3:AirlineOffers>
+          <ns3:TotalOfferQuantity>5</ns3:TotalOfferQuantity>
+          <ns3:Owner>S7</ns3:Owner>
+          <ns3:AirlineOffer>
+            <ns3:OfferID Owner="S7">OF1</ns3:OfferID>
+            <ns3:PricedOffer>
+              <ns3:OfferPrice OfferItemID="OPt0RmYkftg9ub09NWHd4dZl5/0L8TSxoxM9l7OIwP4ZQCVXI/e0SZGyfsba5SPGYZGeAJB4002/0/1">
+                <ns3:RequestedDate>
+                  <ns3:PriceDetail>
+                    <ns3:TotalAmount>
+                      <ns3:DetailCurrencyPrice>
+                        <ns3:Total Code="RUB">21400</ns3:Total>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">3000</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:DetailCurrencyPrice>
+                    </ns3:TotalAmount>
+                    <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                    <ns3:FareFiledIn>
+                      <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                    </ns3:FareFiledIn>
+                  </ns3:PriceDetail>
+                  <ns3:Associations>
+                    <ns3:AssociatedTraveler>
+                      <ns3:TravelerReferences>SH1</ns3:TravelerReferences>
+                    </ns3:AssociatedTraveler>
+                    <ns3:ApplicableFlight>
+                      <ns3:OriginDestinationReferences>OD1 OD2</ns3:OriginDestinationReferences>
+                      <ns3:FlightReferences>FL1</ns3:FlightReferences>
+                      <ns3:FlightSegmentReference ref="SEG1">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">T</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG1</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                      <ns3:FlightSegmentReference ref="SEG2">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">Q</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG2</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                    </ns3:ApplicableFlight>
+                    <ns3:OfferDetailAssociation>
+                      <ns3:OfferPenaltyReferences>PL1</ns3:OfferPenaltyReferences>
+                    </ns3:OfferDetailAssociation>
+                    <ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG1</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG2</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>PRICE</ns3:Type>
+                        <ns3:ReferenceValue>FC1</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                    </ns3:OtherAssociation>
+                  </ns3:Associations>
+                </ns3:RequestedDate>
+                <ns3:FareDetail>
+                  <ns3:FareIndicatorCode>
+                    <ns3:Code>flexEconomy</ns3:Code>
+                  </ns3:FareIndicatorCode>
+                  <ns3:FareComponent refs="SH1" ObjectKey="FC1">
+                    <ns3:Parameters Quantity="1"/>
+                    <ns3:PriceBreakdown>
+                      <ns3:Price>
+                        <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                        <ns3:FareFiledIn>
+                          <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                        </ns3:FareFiledIn>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">3000</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:Price>
+                    </ns3:PriceBreakdown>
+                  </ns3:FareComponent>
+                  <ns3:Remarks>
+                    <ns3:Remark>eNoLCXHz8Q93DjY0NzQyNAv2iXTxdQ02NzE1M7EODARJQSSAov5hTsHmhhaGAFOKDPw=</ns3:Remark>
+                  </ns3:Remarks>
+                </ns3:FareDetail>
+              </ns3:OfferPrice>
+            </ns3:PricedOffer>
+          </ns3:AirlineOffer>
+          <ns3:AirlineOffer>
+            <ns3:OfferID Owner="S7">OF2</ns3:OfferID>
+            <ns3:PricedOffer>
+              <ns3:OfferPrice OfferItemID="OPt0RmYkftg9ub09NWHd4dZl5/0L8TSxoxM9l7OIwP4ZQCVXI/e0SZGyfsba5SPGYZGeAJB4003/0/1">
+                <ns3:RequestedDate>
+                  <ns3:PriceDetail>
+                    <ns3:TotalAmount>
+                      <ns3:DetailCurrencyPrice>
+                        <ns3:Total Code="RUB">21400</ns3:Total>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">3000</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:DetailCurrencyPrice>
+                    </ns3:TotalAmount>
+                    <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                    <ns3:FareFiledIn>
+                      <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                    </ns3:FareFiledIn>
+                  </ns3:PriceDetail>
+                  <ns3:Associations>
+                    <ns3:AssociatedTraveler>
+                      <ns3:TravelerReferences>SH1</ns3:TravelerReferences>
+                    </ns3:AssociatedTraveler>
+                    <ns3:ApplicableFlight>
+                      <ns3:OriginDestinationReferences>OD1 OD2</ns3:OriginDestinationReferences>
+                      <ns3:FlightReferences>FL2</ns3:FlightReferences>
+                      <ns3:FlightSegmentReference ref="SEG3">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">T</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG3</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                      <ns3:FlightSegmentReference ref="SEG4">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">Q</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG4</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                    </ns3:ApplicableFlight>
+                    <ns3:OfferDetailAssociation>
+                      <ns3:OfferPenaltyReferences>PL1</ns3:OfferPenaltyReferences>
+                    </ns3:OfferDetailAssociation>
+                    <ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG3</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG4</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>PRICE</ns3:Type>
+                        <ns3:ReferenceValue>FC2</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                    </ns3:OtherAssociation>
+                  </ns3:Associations>
+                </ns3:RequestedDate>
+                <ns3:FareDetail>
+                  <ns3:FareIndicatorCode>
+                    <ns3:Code>flexEconomy</ns3:Code>
+                  </ns3:FareIndicatorCode>
+                  <ns3:FareComponent refs="SH1" ObjectKey="FC2">
+                    <ns3:Parameters Quantity="1"/>
+                    <ns3:PriceBreakdown>
+                      <ns3:Price>
+                        <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                        <ns3:FareFiledIn>
+                          <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                        </ns3:FareFiledIn>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">3000</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:Price>
+                    </ns3:PriceBreakdown>
+                  </ns3:FareComponent>
+                  <ns3:Remarks>
+                    <ns3:Remark>eNoLCXHz8Q93DjY0NzQyNAv2iXTxdQ02NzE1M7EODARJQSSAov5hTsHmhubGAFOKDP0=</ns3:Remark>
+                  </ns3:Remarks>
+                </ns3:FareDetail>
+              </ns3:OfferPrice>
+            </ns3:PricedOffer>
+          </ns3:AirlineOffer>
+          <ns3:AirlineOffer>
+            <ns3:OfferID Owner="S7">OF3</ns3:OfferID>
+            <ns3:PricedOffer>
+              <ns3:OfferPrice OfferItemID="OPt0RmYkftg9ub09NWHd4dZl5/0L8TSxoxM9l7OIwP4ZQCVXI/e0SZGyfsba5SPGYZGeAJB4004/0/1">
+                <ns3:RequestedDate>
+                  <ns3:PriceDetail>
+                    <ns3:TotalAmount>
+                      <ns3:DetailCurrencyPrice>
+                        <ns3:Total Code="RUB">21400</ns3:Total>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">3000</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:DetailCurrencyPrice>
+                    </ns3:TotalAmount>
+                    <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                    <ns3:FareFiledIn>
+                      <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                    </ns3:FareFiledIn>
+                  </ns3:PriceDetail>
+                  <ns3:Associations>
+                    <ns3:AssociatedTraveler>
+                      <ns3:TravelerReferences>SH1</ns3:TravelerReferences>
+                    </ns3:AssociatedTraveler>
+                    <ns3:ApplicableFlight>
+                      <ns3:OriginDestinationReferences>OD1 OD2</ns3:OriginDestinationReferences>
+                      <ns3:FlightReferences>FL3</ns3:FlightReferences>
+                      <ns3:FlightSegmentReference ref="SEG5">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">T</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG5</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                      <ns3:FlightSegmentReference ref="SEG6">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">Q</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG6</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                    </ns3:ApplicableFlight>
+                    <ns3:OfferDetailAssociation>
+                      <ns3:OfferPenaltyReferences>PL1</ns3:OfferPenaltyReferences>
+                    </ns3:OfferDetailAssociation>
+                    <ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG5</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG6</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>PRICE</ns3:Type>
+                        <ns3:ReferenceValue>FC3</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                    </ns3:OtherAssociation>
+                  </ns3:Associations>
+                </ns3:RequestedDate>
+                <ns3:FareDetail>
+                  <ns3:FareIndicatorCode>
+                    <ns3:Code>flexEconomy</ns3:Code>
+                  </ns3:FareIndicatorCode>
+                  <ns3:FareComponent refs="SH1" ObjectKey="FC3">
+                    <ns3:Parameters Quantity="1"/>
+                    <ns3:PriceBreakdown>
+                      <ns3:Price>
+                        <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                        <ns3:FareFiledIn>
+                          <ns3:BaseAmount Code="RUB">18400</ns3:BaseAmount>
+                        </ns3:FareFiledIn>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">3000</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:Price>
+                    </ns3:PriceBreakdown>
+                  </ns3:FareComponent>
+                  <ns3:Remarks>
+                    <ns3:Remark>eNoLCXHz8Q93DjY0NzQyNAv2iXTxdQ02NzE1M7EODARJQSSAov5hTsHmhubmAFOODQE=</ns3:Remark>
+                  </ns3:Remarks>
+                </ns3:FareDetail>
+              </ns3:OfferPrice>
+            </ns3:PricedOffer>
+          </ns3:AirlineOffer>
+          <ns3:AirlineOffer>
+            <ns3:OfferID Owner="S7">OF4</ns3:OfferID>
+            <ns3:PricedOffer>
+              <ns3:OfferPrice OfferItemID="OPt0RmYkftg9ub09NWHd4dZl5/0L8TSxoxM9l7OIwP4ZQCVXI/e0SZGyfsba5SPGYZGeAJB4001/0/1">
+                <ns3:RequestedDate>
+                  <ns3:PriceDetail>
+                    <ns3:TotalAmount>
+                      <ns3:DetailCurrencyPrice>
+                        <ns3:Total Code="RUB">22400</ns3:Total>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">3000</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:DetailCurrencyPrice>
+                    </ns3:TotalAmount>
+                    <ns3:BaseAmount Code="RUB">19400</ns3:BaseAmount>
+                    <ns3:FareFiledIn>
+                      <ns3:BaseAmount Code="RUB">19400</ns3:BaseAmount>
+                    </ns3:FareFiledIn>
+                  </ns3:PriceDetail>
+                  <ns3:Associations>
+                    <ns3:AssociatedTraveler>
+                      <ns3:TravelerReferences>SH1</ns3:TravelerReferences>
+                    </ns3:AssociatedTraveler>
+                    <ns3:ApplicableFlight>
+                      <ns3:OriginDestinationReferences>OD1 OD2</ns3:OriginDestinationReferences>
+                      <ns3:FlightReferences>FL4</ns3:FlightReferences>
+                      <ns3:FlightSegmentReference ref="SEG7">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">T</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG7</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                      <ns3:FlightSegmentReference ref="SEG8">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">N</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG8</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                    </ns3:ApplicableFlight>
+                    <ns3:OfferDetailAssociation>
+                      <ns3:OfferPenaltyReferences>PL1</ns3:OfferPenaltyReferences>
+                    </ns3:OfferDetailAssociation>
+                    <ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG7</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG8</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>PRICE</ns3:Type>
+                        <ns3:ReferenceValue>FC4</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                    </ns3:OtherAssociation>
+                  </ns3:Associations>
+                </ns3:RequestedDate>
+                <ns3:FareDetail>
+                  <ns3:FareIndicatorCode>
+                    <ns3:Code>flexEconomy</ns3:Code>
+                  </ns3:FareIndicatorCode>
+                  <ns3:FareComponent refs="SH1" ObjectKey="FC4">
+                    <ns3:Parameters Quantity="1"/>
+                    <ns3:PriceBreakdown>
+                      <ns3:Price>
+                        <ns3:BaseAmount Code="RUB">19400</ns3:BaseAmount>
+                        <ns3:FareFiledIn>
+                          <ns3:BaseAmount Code="RUB">19400</ns3:BaseAmount>
+                        </ns3:FareFiledIn>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">3000</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:Price>
+                    </ns3:PriceBreakdown>
+                  </ns3:FareComponent>
+                  <ns3:Remarks>
+                    <ns3:Remark>eNoLCXHz8Q93DjY0NzQyNAv2iXTxdQ02NzE1M7H28wNJQSSAov5hTsHmhuamAFMFDPk=</ns3:Remark>
+                  </ns3:Remarks>
+                </ns3:FareDetail>
+              </ns3:OfferPrice>
+            </ns3:PricedOffer>
+          </ns3:AirlineOffer>
+          <ns3:AirlineOffer>
+            <ns3:OfferID Owner="S7">OF5</ns3:OfferID>
+            <ns3:PricedOffer>
+              <ns3:OfferPrice OfferItemID="OPt0RmYkftg9ub09NWHd4dZl5/0L8TSxoxM9l7OIwP4ZQCVXI/e0SZGyfsba5SPGYZGeAJB4005/0/1">
+                <ns3:RequestedDate>
+                  <ns3:PriceDetail>
+                    <ns3:TotalAmount>
+                      <ns3:DetailCurrencyPrice>
+                        <ns3:Total Code="RUB">29600</ns3:Total>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">4500</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:DetailCurrencyPrice>
+                    </ns3:TotalAmount>
+                    <ns3:BaseAmount Code="RUB">25100</ns3:BaseAmount>
+                    <ns3:FareFiledIn>
+                      <ns3:BaseAmount Code="RUB">25100</ns3:BaseAmount>
+                    </ns3:FareFiledIn>
+                  </ns3:PriceDetail>
+                  <ns3:Associations>
+                    <ns3:AssociatedTraveler>
+                      <ns3:TravelerReferences>SH1</ns3:TravelerReferences>
+                    </ns3:AssociatedTraveler>
+                    <ns3:ApplicableFlight>
+                      <ns3:OriginDestinationReferences>OD1 OD3 OD4</ns3:OriginDestinationReferences>
+                      <ns3:FlightReferences>FL5</ns3:FlightReferences>
+                      <ns3:FlightSegmentReference ref="SEG9">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">T</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG9</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                      <ns3:FlightSegmentReference ref="SEG10">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">S</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG10</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                      <ns3:FlightSegmentReference ref="SEG11">
+                        <ns3:ClassOfService>
+                          <ns3:Code SeatsLeft="9">T</ns3:Code>
+                          <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+                        </ns3:ClassOfService>
+                        <ns3:BagDetailAssociation>
+                          <ns3:CheckedBagReferences>BG11</ns3:CheckedBagReferences>
+                        </ns3:BagDetailAssociation>
+                      </ns3:FlightSegmentReference>
+                    </ns3:ApplicableFlight>
+                    <ns3:OfferDetailAssociation>
+                      <ns3:OfferPenaltyReferences>PL1</ns3:OfferPenaltyReferences>
+                    </ns3:OfferDetailAssociation>
+                    <ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG9</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG10</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>FARE</ns3:Type>
+                        <ns3:ReferenceValue>FG11</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                      <ns3:OtherAssociation>
+                        <ns3:Type>PRICE</ns3:Type>
+                        <ns3:ReferenceValue>FC5</ns3:ReferenceValue>
+                      </ns3:OtherAssociation>
+                    </ns3:OtherAssociation>
+                  </ns3:Associations>
+                </ns3:RequestedDate>
+                <ns3:FareDetail>
+                  <ns3:FareIndicatorCode>
+                    <ns3:Code>flexEconomy</ns3:Code>
+                  </ns3:FareIndicatorCode>
+                  <ns3:FareComponent refs="SH1" ObjectKey="FC5">
+                    <ns3:Parameters Quantity="1"/>
+                    <ns3:PriceBreakdown>
+                      <ns3:Price>
+                        <ns3:BaseAmount Code="RUB">25100</ns3:BaseAmount>
+                        <ns3:FareFiledIn>
+                          <ns3:BaseAmount Code="RUB">25100</ns3:BaseAmount>
+                        </ns3:FareFiledIn>
+                        <ns3:Taxes>
+                          <ns3:Total Code="RUB">4500</ns3:Total>
+                        </ns3:Taxes>
+                      </ns3:Price>
+                    </ns3:PriceBreakdown>
+                  </ns3:FareComponent>
+                  <ns3:Remarks>
+                    <ns3:Remark>eNoLCXHz8Q93DjY0NzQyNAv2iXTxdQ02NzE1M7EODgZJQSSAoo5OjsFAtrF1SAhc3Bwo6B/mFGxubGBsAgDpZBMm</ns3:Remark>
+                  </ns3:Remarks>
+                </ns3:FareDetail>
+              </ns3:OfferPrice>
+            </ns3:PricedOffer>
+          </ns3:AirlineOffer>
+        </ns3:AirlineOffers>
+      </ns3:OffersGroup>
+      <ns3:DataLists>
+        <ns3:AnonymousTravelerList>
+          <ns3:AnonymousTraveler ObjectKey="SH1">
+            <ns3:PTC Quantity="1">ADT</ns3:PTC>
+          </ns3:AnonymousTraveler>
+          <ns3:AnonymousTraveler ObjectKey="SH2">
+            <ns3:PTC Quantity="0">CHD</ns3:PTC>
+          </ns3:AnonymousTraveler>
+          <ns3:AnonymousTraveler ObjectKey="SH3">
+            <ns3:PTC Quantity="0">INF</ns3:PTC>
+          </ns3:AnonymousTraveler>
+        </ns3:AnonymousTravelerList>
+        <ns3:CheckedBagAllowanceList>
+          <ns3:CheckedBagAllowance ListKey="BG1">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG2">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG3">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG4">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG5">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG6">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG7">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG8">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG9">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG10">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+          <ns3:CheckedBagAllowance ListKey="BG11">
+            <ns3:WeightAllowance>
+              <ns3:MaximumWeight>
+                <ns3:Value>20</ns3:Value>
+                <ns3:UOM>Kilogram</ns3:UOM>
+              </ns3:MaximumWeight>
+              <ns3:Descriptions>
+                <ns3:Description>
+                  <ns3:Text>20K</ns3:Text>
+                </ns3:Description>
+              </ns3:Descriptions>
+            </ns3:WeightAllowance>
+          </ns3:CheckedBagAllowance>
+        </ns3:CheckedBagAllowanceList>
+        <ns3:FareList>
+          <ns3:FareGroup refs="SEG1" ListKey="FG1">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>TFLOWCS</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC1</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG2" ListKey="FG2">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>QFLOW</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC2</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>QFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG3" ListKey="FG3">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>TFLOWCS</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC3</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG4" ListKey="FG4">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>QFLOW</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC4</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>QFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG5" ListKey="FG5">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>TFLOWCS</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC5</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG6" ListKey="FG6">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>QFLOW</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC6</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>QFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG7" ListKey="FG7">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>TFLOWCS</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC7</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG8" ListKey="FG8">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>NFLOW</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC8</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>NFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG9" ListKey="FG9">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>TFLOWCS</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC9</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG10" ListKey="FG10">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>SFLOW</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC10</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>SFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+          <ns3:FareGroup refs="SEG11" ListKey="FG11">
+            <ns3:Fare>
+              <ns3:FareCode>
+                <ns3:Code>TFLOW</ns3:Code>
+              </ns3:FareCode>
+              <ns3:FareDetail>
+                <ns3:FareComponent/>
+                <ns3:PriceClassReference>PC11</ns3:PriceClassReference>
+              </ns3:FareDetail>
+            </ns3:Fare>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+          </ns3:FareGroup>
+        </ns3:FareList>
+        <ns3:FlightSegmentList>
+          <ns3:FlightSegment SegmentKey="SEG1">
+            <ns3:Departure>
+              <ns3:AirportCode>SLY</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>09:10</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>10:10</ns3:Time>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>4564</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>YC</ns3:AirlineID>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Airbus A320-100/200</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1214</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT3H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG2">
+            <ns3:Departure>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>17:20</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>OVB</ns3:AirportCode>
+              <ns3:Date>2017-12-17</ns3:Date>
+              <ns3:Time>01:20</ns3:Time>
+              <ns3:Terminal>
+                <ns3:Name>A</ns3:Name>
+              </ns3:Terminal>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>181</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>GH</ns3:AirlineID>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Boeing 737-800 Passenger</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1732</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT4H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG3">
+            <ns3:Departure>
+              <ns3:AirportCode>SLY</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>09:10</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>10:10</ns3:Time>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>4564</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>YC</ns3:AirlineID>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Airbus A320-100/200</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1214</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT3H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG4">
+            <ns3:Departure>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>21:30</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>OVB</ns3:AirportCode>
+              <ns3:Date>2017-12-17</ns3:Date>
+              <ns3:Time>05:30</ns3:Time>
+              <ns3:Terminal>
+                <ns3:Name>A</ns3:Name>
+              </ns3:Terminal>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>173</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>GH</ns3:AirlineID>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Boeing 737-800 Passenger</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1732</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT4H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG5">
+            <ns3:Departure>
+              <ns3:AirportCode>SLY</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>09:10</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>10:10</ns3:Time>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>4564</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>YC</ns3:AirlineID>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Airbus A320-100/200</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1214</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT3H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG6">
+            <ns3:Departure>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>23:30</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>OVB</ns3:AirportCode>
+              <ns3:Date>2017-12-17</ns3:Date>
+              <ns3:Time>07:30</ns3:Time>
+              <ns3:Terminal>
+                <ns3:Name>A</ns3:Name>
+              </ns3:Terminal>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>177</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>177</ns3:FlightNumber>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Airbus A321</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1732</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT4H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG7">
+            <ns3:Departure>
+              <ns3:AirportCode>SLY</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>09:10</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>10:10</ns3:Time>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>4564</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>YC</ns3:AirlineID>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Airbus A320-100/200</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1214</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT3H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG8">
+            <ns3:Departure>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>13:35</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>OVB</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>21:35</ns3:Time>
+              <ns3:Terminal>
+                <ns3:Name>A</ns3:Name>
+              </ns3:Terminal>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>175</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>175</ns3:FlightNumber>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Airbus A320-100/200</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1732</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT4H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG9">
+            <ns3:Departure>
+              <ns3:AirportCode>SLY</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>09:10</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>10:10</ns3:Time>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>4564</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>YC</ns3:AirlineID>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Airbus A320-100/200</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>1214</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT3H0M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG10">
+            <ns3:Departure>
+              <ns3:AirportCode>DME</ns3:AirportCode>
+              <ns3:Date>2017-12-16</ns3:Date>
+              <ns3:Time>22:05</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>ABA</ns3:AirportCode>
+              <ns3:Date>2017-12-17</ns3:Date>
+              <ns3:Time>06:40</ns3:Time>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>123</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>GH</ns3:AirlineID>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Boeing 737-800 Passenger</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>2090</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT4H35M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+          <ns3:FlightSegment SegmentKey="SEG11">
+            <ns3:Departure>
+              <ns3:AirportCode>ABA</ns3:AirportCode>
+              <ns3:Date>2017-12-17</ns3:Date>
+              <ns3:Time>09:10</ns3:Time>
+            </ns3:Departure>
+            <ns3:Arrival>
+              <ns3:AirportCode>OVB</ns3:AirportCode>
+              <ns3:Date>2017-12-17</ns3:Date>
+              <ns3:Time>10:35</ns3:Time>
+              <ns3:Terminal>
+                <ns3:Name>A</ns3:Name>
+              </ns3:Terminal>
+            </ns3:Arrival>
+            <ns3:MarketingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>3034</ns3:FlightNumber>
+            </ns3:MarketingCarrier>
+            <ns3:OperatingCarrier>
+              <ns3:AirlineID>S7</ns3:AirlineID>
+              <ns3:FlightNumber>3034</ns3:FlightNumber>
+            </ns3:OperatingCarrier>
+            <ns3:Equipment>
+              <ns3:AircraftCode>ref</ns3:AircraftCode>
+              <ns3:AirlineEquipCode>Embraer 170 Regional Jet</ns3:AirlineEquipCode>
+            </ns3:Equipment>
+            <ns3:FlightDetail>
+              <ns3:FlightDistance>
+                <ns3:Value>361</ns3:Value>
+                <ns3:UOM>Miles</ns3:UOM>
+              </ns3:FlightDistance>
+              <ns3:FlightDuration>
+                <ns3:Value>PT1H25M</ns3:Value>
+              </ns3:FlightDuration>
+            </ns3:FlightDetail>
+          </ns3:FlightSegment>
+        </ns3:FlightSegmentList>
+        <ns3:FlightList>
+          <ns3:Flight FlightKey="FL1">
+            <ns3:SegmentReferences>SEG1 SEG2</ns3:SegmentReferences>
+          </ns3:Flight>
+          <ns3:Flight FlightKey="FL2">
+            <ns3:SegmentReferences>SEG3 SEG4</ns3:SegmentReferences>
+          </ns3:Flight>
+          <ns3:Flight FlightKey="FL3">
+            <ns3:SegmentReferences>SEG5 SEG6</ns3:SegmentReferences>
+          </ns3:Flight>
+          <ns3:Flight FlightKey="FL4">
+            <ns3:SegmentReferences>SEG7 SEG8</ns3:SegmentReferences>
+          </ns3:Flight>
+          <ns3:Flight FlightKey="FL5">
+            <ns3:SegmentReferences>SEG9 SEG10 SEG11</ns3:SegmentReferences>
+          </ns3:Flight>
+        </ns3:FlightList>
+        <ns3:OriginDestinationList>
+          <ns3:OriginDestination OriginDestinationKey="OD1">
+            <ns3:DepartureCode>SLY</ns3:DepartureCode>
+            <ns3:ArrivalCode>DME</ns3:ArrivalCode>
+            <ns3:FlightReferences>FL1 FL2 FL3 FL4 FL5</ns3:FlightReferences>
+          </ns3:OriginDestination>
+          <ns3:OriginDestination OriginDestinationKey="OD2">
+            <ns3:DepartureCode>DME</ns3:DepartureCode>
+            <ns3:ArrivalCode>OVB</ns3:ArrivalCode>
+            <ns3:FlightReferences>FL1 FL2 FL3 FL4</ns3:FlightReferences>
+          </ns3:OriginDestination>
+          <ns3:OriginDestination OriginDestinationKey="OD3">
+            <ns3:DepartureCode>DME</ns3:DepartureCode>
+            <ns3:ArrivalCode>ABA</ns3:ArrivalCode>
+            <ns3:FlightReferences>FL5</ns3:FlightReferences>
+          </ns3:OriginDestination>
+          <ns3:OriginDestination OriginDestinationKey="OD4">
+            <ns3:DepartureCode>ABA</ns3:DepartureCode>
+            <ns3:ArrivalCode>OVB</ns3:ArrivalCode>
+            <ns3:FlightReferences>FL5</ns3:FlightReferences>
+          </ns3:OriginDestination>
+        </ns3:OriginDestinationList>
+        <ns3:PenaltyList>
+          <ns3:Penalty refs="FG1 FG2 FG3 FG4 FG5 FG6 FG7 FG8 FG9 FG10 FG11" ObjectKey="PL1">
+            <ns3:Details>
+              <ns3:Detail>
+                <ns3:Type>NS</ns3:Type>
+                <ns3:Amounts>
+                  <ns3:Amount>
+                    <ns3:CurrencyAmountValue Code="RUB">5000</ns3:CurrencyAmountValue>
+                    <ns3:AmountApplication>MinimumPenaltyAmount</ns3:AmountApplication>
+                  </ns3:Amount>
+                  <ns3:Amount>
+                    <ns3:CurrencyAmountValue Code="RUB">5000</ns3:CurrencyAmountValue>
+                    <ns3:AmountApplication>MaximumPenaltyAmount</ns3:AmountApplication>
+                  </ns3:Amount>
+                </ns3:Amounts>
+              </ns3:Detail>
+              <ns3:Detail>
+                <ns3:Type>PDE</ns3:Type>
+                <ns3:Amounts>
+                  <ns3:Amount>
+                    <ns3:CurrencyAmountValue Code="RUB">1500</ns3:CurrencyAmountValue>
+                    <ns3:AmountApplication>MinimumPenaltyAmount</ns3:AmountApplication>
+                  </ns3:Amount>
+                  <ns3:Amount>
+                    <ns3:CurrencyAmountValue Code="RUB">1500</ns3:CurrencyAmountValue>
+                    <ns3:AmountApplication>MaximumPenaltyAmount</ns3:AmountApplication>
+                  </ns3:Amount>
+                </ns3:Amounts>
+              </ns3:Detail>
+              <ns3:Detail>
+                <ns3:Type>ADE</ns3:Type>
+                <ns3:Amounts>
+                  <ns3:Amount>
+                    <ns3:CurrencyAmountValue Code="RUB">5000</ns3:CurrencyAmountValue>
+                    <ns3:AmountApplication>MinimumPenaltyAmount</ns3:AmountApplication>
+                  </ns3:Amount>
+                  <ns3:Amount>
+                    <ns3:CurrencyAmountValue Code="RUB">5000</ns3:CurrencyAmountValue>
+                    <ns3:AmountApplication>MaximumPenaltyAmount</ns3:AmountApplication>
+                  </ns3:Amount>
+                </ns3:Amounts>
+              </ns3:Detail>
+            </ns3:Details>
+          </ns3:Penalty>
+        </ns3:PenaltyList>
+        <ns3:PriceClassList>
+          <ns3:PriceClass ObjectKey="PC1">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">T</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC2">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>QFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">Q</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC3">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">T</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC4">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>QFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">Q</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC5">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">T</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC6">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>QFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">Q</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC7">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">T</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC8">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>NFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">N</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC9">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOWCS</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">T</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC10">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>SFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">S</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+          <ns3:PriceClass ObjectKey="PC11">
+            <ns3:Name>PriceClass</ns3:Name>
+            <ns3:FareBasisCode>
+              <ns3:Code>TFLOW</ns3:Code>
+              <ns3:Application>XEX</ns3:Application>
+            </ns3:FareBasisCode>
+            <ns3:ClassOfService>
+              <ns3:Code SeatsLeft="9">T</ns3:Code>
+              <ns3:MarketingName>ECONOMY</ns3:MarketingName>
+            </ns3:ClassOfService>
+          </ns3:PriceClass>
+        </ns3:PriceClassList>
+      </ns3:DataLists>
+      <ns3:Metadata>
+        <ns3:Other>
+          <ns3:OtherMetadata>
+            <ns3:RuleMetadatas>
+              <ns3:RuleMetadata MetadataKey="RM1">
+                <ns3:RuleID>result_type</ns3:RuleID>
+                <ns3:Status>smartchoice</ns3:Status>
+                <ns3:Remarks>
+                  <ns3:Remark>circuityLimit:5</ns3:Remark>
+                </ns3:Remarks>
+              </ns3:RuleMetadata>
+            </ns3:RuleMetadatas>
+          </ns3:OtherMetadata>
+        </ns3:Other>
+      </ns3:Metadata>
+    </ns3:AirShoppingRS>
+  </ns2:Body>
+</ns2:Envelope>
