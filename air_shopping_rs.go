@@ -1,5 +1,10 @@
 package sdk
 
+import (
+	"fmt"
+	"time"
+)
+
 type AirShoppingRS struct {
 	Version             string `xml:"Version,attr"`
 	Document            *Document
@@ -135,6 +140,31 @@ type FlightSegment struct {
 type FlightDetail struct {
 	FlightDistance *ValueUOM
 	FlightDuration *FlightDuration
+	Stops          *Stops `xml:",omitempty"`
+}
+
+type Stops struct {
+	StopQuantity  int
+	StopLocations []*StopLocation
+}
+
+type StopLocation struct {
+	AirportCode   string
+	ArrivalDate   string
+	ArrivalTime   string
+	DepartureDate string
+	DepartureTime string
+	GroundTime    string
+}
+
+func (l *StopLocation) GetArrivalDate() time.Time {
+	date, _ := time.Parse(longForm, fmt.Sprintf("%s %s", l.ArrivalDate, l.ArrivalTime))
+	return date
+}
+
+func (l *StopLocation) GetDepartureDate() time.Time {
+	date, _ := time.Parse(longForm, fmt.Sprintf("%s %s", l.DepartureDate, l.DepartureTime))
+	return date
 }
 
 type ValueUOM struct {

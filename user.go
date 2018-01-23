@@ -43,12 +43,14 @@ func MakePTC(qty int, passengerType string, qtyAdultChild, qtyInfant, qtyAdult *
 		*qtyInfant += qty
 	}
 
-	switch {
-	case *qtyAdultChild > 9:
-		return
-	case *qtyInfant > *qtyAdult:
-		return
-	}
+	// switch {
+	// case *qtyAdultChild > 9:
+	// 	log.Println(1)
+	// 	return
+	// case *qtyInfant > *qtyAdult:
+	// 	log.Println(2)
+	// 	return
+	// }
 
 	ptc = &PTC{
 		Quantity: qty,
