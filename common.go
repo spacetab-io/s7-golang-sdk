@@ -83,6 +83,7 @@ type Errors struct {
 
 type Error struct {
 	Type      string `xml:",attr"`
+	Tag       string `xml:",attr"`
 	Status    string `xml:",attr"`
 	Owner     string `xml:",attr"`
 	ShortText string `xml:",attr"`
