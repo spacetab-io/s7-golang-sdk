@@ -2,6 +2,7 @@ package sdk
 
 import (
 	"encoding/xml"
+	"time"
 )
 
 type Envelope struct {
@@ -182,6 +183,11 @@ type TicketingTimeLimits struct {
 
 type PaymentTimeLimit struct {
 	DateTime string `xml:",attr"`
+}
+
+func (l *PaymentTimeLimit) GetDate() time.Time {
+	date, _ := time.Parse(longFormT, l.DateTime)
+	return date
 }
 
 type Equipment struct {

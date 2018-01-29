@@ -5,7 +5,10 @@ import (
 	"time"
 )
 
-const longForm = "2006-01-02 15:04"
+const (
+	longForm  = "2006-01-02 15:04"
+	longFormT = "2006-01-02T15:04:05"
+)
 
 type OriginDestination struct {
 	Reference        string          `xml:"refs,attr,omitempty"`
