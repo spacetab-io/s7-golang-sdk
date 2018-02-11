@@ -1,11 +1,11 @@
 package main
 
 import (
-	"gitlab.tm-consulting.ru/avia/services/s7-sdk"
-
 	"encoding/xml"
 	"log"
 	"time"
+
+	sdk "github.com/tmconsulting/s7-golang-sdk"
 )
 
 func main() {

@@ -286,6 +286,7 @@ type Flight struct {
 	Departure         *Point   `xml:",omitempty"`
 	Arrival           *Point   `xml:",omitempty"`
 	MarketingCarrier  *Carrier `xml:",omitempty"`
+	OperatingCarrier  *Carrier `xml:",omitempty"`
 }
 
 type FareDetail struct {

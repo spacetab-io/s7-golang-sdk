@@ -1,12 +1,12 @@
 package main
 
 import (
-	"gitlab.tm-consulting.ru/avia/services/s7-sdk"
-
 	"encoding/xml"
-	"github.com/davecgh/go-spew/spew"
 	"io/ioutil"
 	"log"
+
+	"github.com/davecgh/go-spew/spew"
+	sdk "github.com/tmconsulting/s7-golang-sdk"
 )
 
 func main() {
