@@ -52,6 +52,10 @@ func (p *Point) GetDate() time.Time {
 	return date
 }
 
+func (p *Point) GetDateISO() string {
+	return fmt.Sprintf("%sT%s", p.Date, p.Time)
+}
+
 type Terminal struct {
 	Name string
 }
