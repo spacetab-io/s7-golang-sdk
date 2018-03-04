@@ -60,11 +60,11 @@ type CheckedBagAllowanceList struct {
 }
 
 type CheckedBagAllowance struct {
-	Reference            string `xml:"refs,attr,omitempty"`
-	ID                   string `xml:"ListKey,attr,omitempty"`
-	WeightAllowance      *WeightAllowance
-	AllowanceDescription *AllowanceDescription
-	PieceAllowance       *PieceAllowance
+	Reference            string                `xml:"refs,attr,omitempty"`
+	ID                   string                `xml:"ListKey,attr,omitempty"`
+	WeightAllowance      *WeightAllowance      `xml:",omitempty"`
+	AllowanceDescription *AllowanceDescription `xml:",omitempty"`
+	PieceAllowance       *PieceAllowance       `xml:",omitempty"`
 }
 
 type WeightAllowance struct {

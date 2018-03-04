@@ -38,7 +38,7 @@ func MakeAirDocIssueRQ() (request *Envelope) {
 
 type TicketDocInfo struct {
 	TravelerInfo          *TravelerInfo
-	Traveler              *TravelerInfo       `xml:",omitempty"`
+	Traveler              *TravelerDoc        `xml:",omitempty"`
 	IssuingAirlineInfo    *IssuingAirlineInfo `xml:",omitempty"`
 	BookingReference      *BookingReference
 	BookingReferences     *BookingReferences `xml:",omitempty"`
@@ -51,6 +51,12 @@ type TicketDocInfo struct {
 }
 
 type TravelerInfo struct {
+	Surname string
+	Given   string
+	PTC     string
+}
+
+type TravelerDoc struct {
 	Surname string
 	Given   string
 	PTC     *PTC

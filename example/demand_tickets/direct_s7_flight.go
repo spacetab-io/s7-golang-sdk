@@ -22,9 +22,7 @@ func main() {
 			TravelerInfo: &sdk.TravelerInfo{
 				Surname: "Trefilov",
 				Given:   "Danil",
-				PTC: &sdk.PTC{
-					Value: sdk.PASSENGER_TYPE_CODE_ADULT,
-				},
+				PTC:     sdk.PASSENGER_TYPE_CODE_ADULT,
 			},
 			BookingReference: &sdk.BookingReference{
 				ObjectKey: "RPH1",
