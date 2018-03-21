@@ -102,12 +102,12 @@ func main() {
 							Reference: "SG1",
 							PriceBreakdown: &sdk.PriceBreakdown{
 								Price: &sdk.Price{
-									BaseAmount: &sdk.BaseAmount{
+									BaseAmount: &sdk.Title{
 										Code:  "RUB",
 										Value: 27265,
 									},
 									FareFiledIn: &sdk.FareFiledIn{
-										BaseAmount: &sdk.BaseAmount{
+										BaseAmount: &sdk.Title{
 											Code:  "EUR",
 											Value: 27265,
 										},

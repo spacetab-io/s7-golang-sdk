@@ -276,6 +276,7 @@ type OrderItem struct {
 }
 
 type FlightItem struct {
+	Reference         string `xml:"refs,attr,omitempty"`
 	OriginDestination []*OriginDestinationFlight
 	FareDetail        *FareDetail
 }
@@ -323,7 +324,7 @@ type FareBasisCode struct {
 
 type TicketDesig struct {
 	Application string `xml:",attr,omitempty"`
-	Value       string `xml:",chardata"`
+	Value       int    `xml:",chardata"`
 }
 
 type FareRules struct {
@@ -398,8 +399,9 @@ type RequestedDate struct {
 
 type PriceDetail struct {
 	TotalAmount *TotalAmount
-	BaseAmount  *BaseAmount
+	BaseAmount  *Total
 	FareFiledIn *FareFiledIn
+	Surcharges  *Surcharges
 	Discount    *Discount
 	Taxes       *Taxes
 }
@@ -423,8 +425,8 @@ type TotalAmount struct {
 	DetailCurrencyPrice *DetailCurrencyPrice
 }
 type Total struct {
-	Code  string  `xml:",attr"`
-	Value float64 `xml:",chardata"`
+	Code  string `xml:",attr"`
+	Value int64  `xml:",chardata"`
 }
 
 type Taxes struct {

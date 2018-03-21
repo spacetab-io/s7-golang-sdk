@@ -14,5 +14,23 @@ type ReShopOffers struct {
 type ReShopOffer struct {
 	ID                string `xml:"ObjectKey,attr"`
 	OfferID           *OfferID
+	TotalPrice        *TotalPrice
 	ReShopPricedOffer *PricedOffer
+}
+
+type DetailsPrice struct {
+	Detail *DetalPrice
+}
+
+type DetalPrice struct {
+	SubTotal    *Total
+	Application string
+}
+
+type Surcharges struct {
+	Surcharge *Surcharge
+}
+
+type Surcharge struct {
+	Total *Total
 }

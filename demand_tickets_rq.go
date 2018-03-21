@@ -46,8 +46,23 @@ type TicketDocInfo struct {
 	OriginDestination     *OriginDestinationDemand `xml:",omitempty"`
 	FareInfo              *FareInfo                `xml:",omitempty"`
 	TicketDocument        *TicketDocument          `xml:",omitempty"`
+	Price                 *TicketPrice             `xml:",omitempty"`
 	Commission            *Commission              `xml:",omitempty"`
 	PassengerSpecificData string                   `xml:",omitempty"`
+}
+
+type TicketPrice struct {
+	Total   *Total
+	Details *DetailsTicketPrice
+}
+
+type DetailsTicketPrice struct {
+	Detail []*DetailTicketPrice
+}
+
+type DetailTicketPrice struct {
+	Application string
+	Amount      int
 }
 
 type TravelerInfo struct {

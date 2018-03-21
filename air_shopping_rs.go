@@ -36,9 +36,10 @@ type TotalPrice struct {
 }
 
 type DetailCurrencyPrice struct {
-	Total *Total
-	Fees  *Fees
-	Taxes *Taxes
+	Total   *Total
+	Details *DetailsPrice
+	Fees    *Fees
+	Taxes   *Taxes
 }
 
 type Fees struct {
@@ -117,7 +118,7 @@ type PriceBreakdown struct {
 }
 
 type Price struct {
-	BaseAmount  *BaseAmount
+	BaseAmount  *Total
 	FareFiledIn *FareFiledIn
 	Taxes       *Taxes
 }

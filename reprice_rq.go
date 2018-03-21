@@ -24,9 +24,11 @@ type Actions struct {
 }
 
 type ActionType struct {
+	Context string `xml:",attr,omitempty"`
+	Value   int    `xml:",chardata"`
 }
 
-func MakeItinReshopRQ() (request *Envelope) {
+func MakeItinReshopRQ(actionType *ActionType) (request *Envelope) {
 	request = &Envelope{
 		Header: new(Header),
 		Body: &Body{
@@ -39,7 +41,7 @@ func MakeItinReshopRQ() (request *Envelope) {
 				Query: &Query{
 					Reshop: &Reshop{
 						Actions: &Actions{
-							ActionType: &ActionType{},
+							ActionType: actionType,
 						},
 					},
 				},
