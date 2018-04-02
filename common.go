@@ -67,11 +67,11 @@ type RuleMetadata struct {
 }
 
 type Code struct {
-	SeatsLeft int32  `xml:",attr,omitempty"`
+	SeatsLeft int    `xml:",attr,omitempty"`
 	Value     string `xml:",chardata"`
 }
 
-func MakeCode(seat int32, value string) *Code {
+func MakeCode(seat int, value string) *Code {
 	return &Code{
 		SeatsLeft: seat,
 		Value:     value,
@@ -153,7 +153,7 @@ type ClassOfService struct {
 	MarketingName string `xml:",omitempty"`
 }
 
-func MakeClassOfService(seat int32, value, name string) *ClassOfService {
+func MakeClassOfService(seat int, value, name string) *ClassOfService {
 	return &ClassOfService{
 		Code:          MakeCode(seat, value),
 		MarketingName: name,
