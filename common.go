@@ -298,7 +298,7 @@ type FareDetail struct {
 }
 
 type FareIndicatorCode struct {
-	Code *Code
+	Code string
 }
 
 type FareComponent struct {

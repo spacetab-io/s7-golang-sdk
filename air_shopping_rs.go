@@ -221,8 +221,8 @@ type Amount struct {
 }
 
 type CurrencyAmountValue struct {
-	Code  string `xml:",attr"`
-	Value string `xml:",chardata"`
+	Code  string  `xml:",attr"`
+	Value float32 `xml:",chardata"`
 }
 
 type PriceClassList struct {
