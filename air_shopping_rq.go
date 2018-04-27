@@ -25,7 +25,7 @@ type Traveler struct {
 	AnonymousTraveler *User `xml:",omitempty"`
 }
 
-func MakeTravelers(trs map[string]int) *Travelers {
+func MakeTravelers(trs map[string]int32) *Travelers {
 	travelers := make([]*Traveler, 0)
 	var (
 		qtyAdultChild int
@@ -34,7 +34,7 @@ func MakeTravelers(trs map[string]int) *Travelers {
 	)
 
 	for code, qty := range trs {
-		ptc := MakePTC(qty, code, &qtyAdultChild, &qtyInfant, &qtyAdult)
+		ptc := MakePTC(int(qty), code, &qtyAdultChild, &qtyInfant, &qtyAdult)
 		if ptc != nil {
 			travelers = append(travelers, &Traveler{&User{
 				PTC: ptc,
