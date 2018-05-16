@@ -16,12 +16,12 @@ func main() {
 		"RU", "00000011Z", "1",
 		"OVB902", "1001/1001A", "115")
 
-	request.Body.AirShoppingRQ.Travelers = sdk.MakeTravelers(map[string]int{
-		sdk.PASSENGER_TYPE_CODE_ADULT: 1,
+	request.Body.AirShoppingRQ.Travelers = sdk.MakeTravelers(map[string]int32{
+		sdk.PassengerTypeCodeAdult: 1,
 	})
 
 	request.Body.AirShoppingRQ.CoreQuery.OriginDestinations = &sdk.OriginDestinations{
-		[]*sdk.OriginDestination{
+		OriginDestination: []*sdk.OriginDestination{
 			sdk.MakeOriginDestination("MOW", time.Now().Add(10*24*time.Hour), "MSQ", time.Time{}, 0, 0),
 			sdk.MakeOriginDestination("MSQ", time.Now().Add(17*24*time.Hour), "MOW", time.Time{}, 0, 0),
 		},
@@ -33,7 +33,7 @@ func main() {
 		},
 	}
 
-	request.Body.AirShoppingRQ.Metadata = sdk.MakeResultType(sdk.RESULT_TYPE_SMARTCHOICE)
+	request.Body.AirShoppingRQ.Metadata = sdk.MakeResultType(sdk.ResultTypeSmartchoice)
 
 	output, err := xml.MarshalIndent(request, "", "  ")
 	log.Printf("out: \n%s\nerr: %v\n", output, err)

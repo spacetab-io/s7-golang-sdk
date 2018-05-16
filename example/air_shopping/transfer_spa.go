@@ -22,14 +22,14 @@ func main() {
 		},
 	}
 
-	request.Body.AirShoppingRQ.Travelers = sdk.MakeTravelers(map[string]int{
-		sdk.PASSENGER_TYPE_CODE_ADULT:  2,
-		sdk.PASSENGER_TYPE_CODE_CHILD:  2,
-		sdk.PASSENGER_TYPE_CODE_INFANT: 2,
+	request.Body.AirShoppingRQ.Travelers = sdk.MakeTravelers(map[string]int32{
+		sdk.PassengerTypeCodeAdult:  2,
+		sdk.PassengerTypeCodeChild:  2,
+		sdk.PassengerTypeCodeInfant: 2,
 	})
 
 	request.Body.AirShoppingRQ.CoreQuery.OriginDestinations = &sdk.OriginDestinations{
-		[]*sdk.OriginDestination{
+		OriginDestination: []*sdk.OriginDestination{
 			sdk.MakeOriginDestination("MOW", time.Now().Add(10*24*time.Hour), "SVX", time.Now().Add(10*24*time.Hour), 0, 0),
 		},
 	}
@@ -40,7 +40,7 @@ func main() {
 		},
 	}
 
-	request.Body.AirShoppingRQ.Metadata = sdk.MakeResultType(sdk.RESULT_TYPE_SMARTCHOICE)
+	request.Body.AirShoppingRQ.Metadata = sdk.MakeResultType(sdk.ResultTypeSmartchoice)
 
 	output, err := xml.MarshalIndent(request, "", "  ")
 	log.Printf("out: \n%s\nerr: %v\n", output, err)

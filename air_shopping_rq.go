@@ -1,4 +1,4 @@
-package sdk
+package s7_api_sdk
 
 import (
 	"encoding/xml"
@@ -72,20 +72,20 @@ type ServiceFilter struct {
 }
 
 const (
-	FILTER_GROUP_CIRCUITY_LIMIT = "circuityLimit"
-	FILTER_GROUP_DURATION_LIMIT = "durationLimit"
-	FILTER_GROUP_SEARCH_METRIC  = "searchMetric"
-	FILTER_GROUP_SORT           = "sort"
+	FilterGroupCircuityLimit = "circuityLimit"
+	FilterGroupDurationLimit = "durationLimit"
+	FilterGroupSearchMetric  = "searchMetric"
+	FilterGroupSort          = "sort"
 )
 
 const (
-	FILTER_SUBGROUP_QUICKEST        = "QUICKEST"
-	FILTER_SUBGROUP_MOST_CONVENIENT = "MOST-CONVENIENT"
-	FILTER_SUBGROUP_CHEAPEST        = "CHEAPEST"
-	FILTER_SUBGROUP_LEISURE         = "LEISURE"
-	FILTER_SUBGROUP_BUSINESS        = "BUSINESS"
-	FILTER_SUBGROUP_LUXURY          = "LUXURY"
-	FILTER_SUBGROUP_MIN_PRICE       = "MIN_PRICE"
+	FilterSubgroupQuickest       = "QUICKEST"
+	FilterSubgroupMostConvenient = "MOST-CONVENIENT"
+	FilterSubgroupCheapest       = "CHEAPEST"
+	FilterSubgroupLeisure        = "LEISURE"
+	FilterSubgroupBusiness       = "BUSINESS"
+	FilterSubgroupLuxury         = "LUXURY"
+	FilterSubgroupMinPrice       = "MIN_PRICE"
 )
 
 func MakeServiceFilters(params map[string]string) *ServiceFilters {
@@ -101,21 +101,21 @@ func MakeServiceFilters(params map[string]string) *ServiceFilters {
 
 func MakeServiceFilter(group, subGroup string) *ServiceFilter {
 	switch {
-	case group != FILTER_GROUP_CIRCUITY_LIMIT &&
-		group != FILTER_GROUP_DURATION_LIMIT &&
-		group != FILTER_GROUP_SEARCH_METRIC &&
-		group != FILTER_GROUP_SORT:
+	case group != FilterGroupCircuityLimit &&
+		group != FilterGroupDurationLimit &&
+		group != FilterGroupSearchMetric &&
+		group != FilterGroupSort:
 		return nil
-	case group == FILTER_GROUP_SEARCH_METRIC &&
-		subGroup != FILTER_SUBGROUP_QUICKEST &&
-		subGroup != FILTER_SUBGROUP_MOST_CONVENIENT &&
-		subGroup != FILTER_SUBGROUP_CHEAPEST &&
-		subGroup != FILTER_SUBGROUP_LEISURE &&
-		subGroup != FILTER_SUBGROUP_BUSINESS &&
-		subGroup != FILTER_SUBGROUP_LUXURY:
+	case group == FilterGroupSearchMetric &&
+		subGroup != FilterSubgroupQuickest &&
+		subGroup != FilterSubgroupMostConvenient &&
+		subGroup != FilterSubgroupCheapest &&
+		subGroup != FilterSubgroupLeisure &&
+		subGroup != FilterSubgroupBusiness &&
+		subGroup != FilterSubgroupLuxury:
 		return nil
-	case group == FILTER_GROUP_SORT &&
-		subGroup != FILTER_SUBGROUP_MIN_PRICE:
+	case group == FilterGroupSort &&
+		subGroup != FilterSubgroupMinPrice:
 	}
 	serviceFilter := new(ServiceFilter)
 	serviceFilter.GroupCode = group
@@ -174,20 +174,20 @@ func MakePreference(businessCabinOnly, directPreferences string) *Preference {
 }
 
 const (
-	RESULT_TYPE_SMARTCHOICE = "smartchoice"
-	RESULT_TYPE_LOWFARE     = "lowfare"
-	RESULT_TYPE_FLIGHTINFO  = "flightinfo"
+	ResultTypeSmartchoice = "smartchoice"
+	ResultTypeLowfare     = "lowfare"
+	ResultTypeFlightinfo  = "flightinfo"
 )
 
 func MakeResultType(status string) *Metadata {
-	if status != RESULT_TYPE_SMARTCHOICE &&
-		status != RESULT_TYPE_LOWFARE &&
-		status != RESULT_TYPE_FLIGHTINFO {
+	if status != ResultTypeSmartchoice &&
+		status != ResultTypeLowfare &&
+		status != ResultTypeFlightinfo {
 		return nil
 	}
 
 	ruleMetadata := []*RuleMetadata{
-		&RuleMetadata{
+		{
 			MetadataKey: "RM1",
 			RuleID:      "result_type",
 			Status:      status,

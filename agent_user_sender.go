@@ -1,4 +1,4 @@
-package sdk
+package s7_api_sdk
 
 type AgentUserSender struct {
 	OtherIDs    *OtherIDs

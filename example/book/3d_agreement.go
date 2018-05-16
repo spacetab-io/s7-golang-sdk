@@ -16,11 +16,11 @@ func main() {
 		"OVB902", "1001/1001A", "115")
 
 	passengers := []*sdk.User{
-		&sdk.User{
+		{
 			ID: "SH1",
 			PTC: &sdk.PTC{
 				Quantity: 1,
-				Value:    sdk.PASSENGER_TYPE_CODE_ADULT,
+				Value:    sdk.PassengerTypeCodeAdult,
 			},
 			Age:  sdk.MakeAge("1970-10-25"),
 			Name: sdk.MakeName("Mrs", "Lila", "Conelly", ""),
@@ -53,14 +53,14 @@ func main() {
 			ResponseID: "UNKNOWN",
 			Offers: &sdk.Offers{
 				Offer: []*sdk.Offer{
-					&sdk.Offer{
+					{
 						OfferID: &sdk.OfferID{
 							Owner: "S7",
 							Value: "UNKNOWN",
 						},
 						OfferItems: &sdk.OfferItems{
 							OfferItem: []*sdk.OfferItem{
-								&sdk.OfferItem{
+								{
 									OfferItemID: &sdk.OfferID{
 										Owner: "S7",
 										Value: "UNKNOWN",
@@ -86,9 +86,9 @@ func main() {
 			OfferItemType: &sdk.OfferItemType{
 				DetailedFlightItem: &sdk.DetailedFlightItem{
 					OriginDestination: []*sdk.OriginDestinationFlight{
-						&sdk.OriginDestinationFlight{
+						{
 							Flight: []*sdk.OriginDestination{
-								&sdk.OriginDestination{
+								{
 									SegmentKey:       "FL1",
 									Departure:        sdk.MakePoint("MUC", "2017-12-27", "10:35", ""),
 									Arrival:          sdk.MakePoint("DME", "2017-12-27", "15:45", ""),
@@ -96,7 +96,7 @@ func main() {
 									OperatingCarrier: sdk.MakeCarrier("S7", "", "796"),
 									ClassOfService:   sdk.MakeClassOfService(0, "O", ""),
 								},
-								&sdk.OriginDestination{
+								{
 									SegmentKey:       "FL2",
 									Departure:        sdk.MakePoint("DME", "2017-12-27", "08:30", ""),
 									Arrival:          sdk.MakePoint("MUC", "2017-12-27", "09:40", ""),
@@ -115,7 +115,7 @@ func main() {
 	request.Body.OrderCreateRQ.Query.DataLists = &sdk.DataLists{
 		InstructionsList: &sdk.InstructionsList{
 			Instruction: []*sdk.Instruction{
-				&sdk.Instruction{
+				{
 					ListKey: "CC",
 					SpecialBookingInstruction: &sdk.SpecialBookingInstruction{
 						Code:       "QUW1725",

@@ -1,13 +1,13 @@
-package sdk
+package s7_api_sdk
 
 const (
-	PASSENGER_TYPE_CODE_ADULT  = "ADT"
-	PASSENGER_TYPE_CODE_CHILD  = "CHD"
-	PASSENGER_TYPE_CODE_INFANT = "INF"
+	PassengerTypeCodeAdult  = "ADT"
+	PassengerTypeCodeChild  = "CHD"
+	PassengerTypeCodeInfant = "INF"
 )
 
 type User struct {
-	ID              string `xml:"ObjectKey,attr,omitempty"`
+	ID              string           `xml:"ObjectKey,attr,omitempty"`
 	PTC             *PTC
 	Age             *Age             `xml:",omitempty"`
 	Name            *Name            `xml:",omitempty"`
@@ -28,18 +28,18 @@ func MakePTC(qty int, passengerType string, qtyAdultChild, qtyInfant, qtyAdult *
 		return
 	}
 	switch {
-	case passengerType != PASSENGER_TYPE_CODE_ADULT &&
-		passengerType != PASSENGER_TYPE_CODE_CHILD &&
-		passengerType != PASSENGER_TYPE_CODE_INFANT:
+	case passengerType != PassengerTypeCodeAdult &&
+		passengerType != PassengerTypeCodeChild &&
+		passengerType != PassengerTypeCodeInfant:
 		return
 	case qty > 9:
 		return
-	case passengerType == PASSENGER_TYPE_CODE_ADULT:
+	case passengerType == PassengerTypeCodeAdult:
 		*qtyAdultChild += qty
 		*qtyAdult += qty
-	case passengerType == PASSENGER_TYPE_CODE_CHILD:
+	case passengerType == PassengerTypeCodeChild:
 		*qtyAdultChild += qty
-	case passengerType == PASSENGER_TYPE_CODE_INFANT:
+	case passengerType == PassengerTypeCodeInfant:
 		*qtyInfant += qty
 	}
 

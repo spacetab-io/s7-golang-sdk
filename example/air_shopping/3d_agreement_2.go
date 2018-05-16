@@ -24,7 +24,7 @@ func main() {
 		},
 	}
 
-	request.Body.AirShoppingRQ.Metadata = sdk.MakeResultType(sdk.RESULT_TYPE_SMARTCHOICE)
+	request.Body.AirShoppingRQ.Metadata = sdk.MakeResultType(sdk.ResultTypeSmartchoice)
 
 	output, err := xml.MarshalIndent(request, "", "  ")
 	log.Printf("out: \n%s\nerr: %v\n", output, err)

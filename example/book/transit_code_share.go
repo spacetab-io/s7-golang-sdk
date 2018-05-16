@@ -16,11 +16,11 @@ func main() {
 		"OVB902", "1001/1001A", "115")
 
 	passengers := []*sdk.User{
-		&sdk.User{
+		{
 			ID: "SH1",
 			PTC: &sdk.PTC{
 				Quantity: 1,
-				Value:    sdk.PASSENGER_TYPE_CODE_ADULT,
+				Value:    sdk.PassengerTypeCodeAdult,
 			},
 			Age:  sdk.MakeAge("1991-10-10"),
 			Name: sdk.MakeName("MR", "Danil", "Trefilov", "Alexandrovich"),
@@ -56,14 +56,14 @@ func main() {
 			ResponseID: "UNKNOWN",
 			Offers: &sdk.Offers{
 				Offer: []*sdk.Offer{
-					&sdk.Offer{
+					{
 						OfferID: &sdk.OfferID{
 							Owner: "S7",
 							Value: "UNKNOWN",
 						},
 						OfferItems: &sdk.OfferItems{
 							OfferItem: []*sdk.OfferItem{
-								&sdk.OfferItem{
+								{
 									OfferItemID: &sdk.OfferID{
 										Owner: "S7",
 										Value: "UNKNOWN",
@@ -89,9 +89,9 @@ func main() {
 			OfferItemType: &sdk.OfferItemType{
 				DetailedFlightItem: &sdk.DetailedFlightItem{
 					OriginDestination: []*sdk.OriginDestinationFlight{
-						&sdk.OriginDestinationFlight{
+						{
 							Flight: []*sdk.OriginDestination{
-								&sdk.OriginDestination{
+								{
 									SegmentKey:       "FL1",
 									Departure:        sdk.MakePoint("SLY", "2018-08-31", "14:30", ""),
 									Arrival:          sdk.MakePoint("OVB", "2018-08-31", "21:30", ""),
@@ -111,13 +111,13 @@ func main() {
 	request.Body.OrderCreateRQ.Query.DataLists = &sdk.DataLists{
 		ServiceList: &sdk.ServiceList{
 			Service: []*sdk.Service{
-				&sdk.Service{
+				{
 					ID:        "SRV1",
 					ServiceID: sdk.MakeOfferID("S7", "SRV1"),
 					Name:      "Empty",
 					Descriptions: &sdk.Descriptions{
 						Description: []*sdk.Description{
-							&sdk.Description{
+							{
 								Text: "Empty",
 							},
 						},
