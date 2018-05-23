@@ -49,7 +49,13 @@ type Fees struct {
 type FlightSegmentReference struct {
 	Reference            string `xml:"ref,attr"`
 	ClassOfService       *ClassOfService
+	Cabin                *CabinFlightSegment
 	BagDetailAssociation *BagDetailAssociation
+}
+
+type CabinFlightSegment struct {
+	CabinDesignator string
+	MarketingName   string
 }
 
 type AnonymousTravelerList struct {
