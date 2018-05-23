@@ -88,5 +88,6 @@ type Payment struct {
 }
 
 type Type struct {
-	Code string
+	Code       string
+	Definition string
 }
