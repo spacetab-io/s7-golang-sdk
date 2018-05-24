@@ -96,15 +96,22 @@ type Contact struct {
 }
 
 func MakeContact(email, countryCode, areaCode, phoneNumber string) *Contact {
-	emailContact := &EmailContact{
-		Address: email,
+	var emailContact *EmailContact
+	if email != "" {
+		emailContact = &EmailContact{
+			Address: email,
+		}
 	}
-	phoneContact := &PhoneContact{
-		Number: PhoneNumber{
-			CountryCode: countryCode,
-			AreaCode:    areaCode,
-			Number:      phoneNumber,
-		},
+
+	var phoneContact *PhoneContact
+	if countryCode != "" && areaCode != "" && phoneNumber != "" {
+		phoneContact = &PhoneContact{
+			Number: PhoneNumber{
+				CountryCode: countryCode,
+				AreaCode:    areaCode,
+				Number:      phoneNumber,
+			},
+		}
 	}
 
 	return &Contact{
