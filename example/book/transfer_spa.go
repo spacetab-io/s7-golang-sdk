@@ -16,11 +16,11 @@ func main() {
 		"OVB902", "1001/1001A", "115")
 
 	passengers := []*sdk.User{
-		&sdk.User{
+		{
 			ID: "SH1",
 			PTC: &sdk.PTC{
 				Quantity: 1,
-				Value:    sdk.PASSENGER_TYPE_CODE_ADULT,
+				Value:    sdk.PassengerTypeCodeAdult,
 			},
 			Age:  sdk.MakeAge("1991-10-09"),
 			Name: sdk.MakeName("MR", "John", "Doe", ""),
@@ -41,11 +41,11 @@ func main() {
 				},
 			},
 		},
-		&sdk.User{
+		{
 			ID: "SH2",
 			PTC: &sdk.PTC{
 				Quantity: 1,
-				Value:    sdk.PASSENGER_TYPE_CODE_ADULT,
+				Value:    sdk.PassengerTypeCodeAdult,
 			},
 			Age:  sdk.MakeAge("1991-10-26"),
 			Name: sdk.MakeName("MRS", "Kate", "Doe", ""),
@@ -66,11 +66,11 @@ func main() {
 				},
 			},
 		},
-		&sdk.User{
+		{
 			ID: "SH3",
 			PTC: &sdk.PTC{
 				Quantity: 1,
-				Value:    sdk.PASSENGER_TYPE_CODE_CHILD,
+				Value:    sdk.PassengerTypeCodeChild,
 			},
 			Age:  sdk.MakeAge("2010-10-09"),
 			Name: sdk.MakeName("MS", "Sevda", "Doe", ""),
@@ -91,11 +91,11 @@ func main() {
 				},
 			},
 		},
-		&sdk.User{
+		{
 			ID: "SH4",
 			PTC: &sdk.PTC{
 				Quantity: 1,
-				Value:    sdk.PASSENGER_TYPE_CODE_CHILD,
+				Value:    sdk.PassengerTypeCodeChild,
 			},
 			Age:  sdk.MakeAge("2010-10-09"),
 			Name: sdk.MakeName("MS", "Vlada", "Doe", ""),
@@ -116,11 +116,11 @@ func main() {
 				},
 			},
 		},
-		&sdk.User{
+		{
 			ID: "SH5",
 			PTC: &sdk.PTC{
 				Quantity: 1,
-				Value:    sdk.PASSENGER_TYPE_CODE_INFANT,
+				Value:    sdk.PassengerTypeCodeInfant,
 			},
 			Age:  sdk.MakeAge("2017-01-09"),
 			Name: sdk.MakeName("MR", "Viktor", "Doe", ""),
@@ -141,11 +141,11 @@ func main() {
 				},
 			},
 		},
-		&sdk.User{
+		{
 			ID: "SH6",
 			PTC: &sdk.PTC{
 				Quantity: 1,
-				Value:    sdk.PASSENGER_TYPE_CODE_INFANT,
+				Value:    sdk.PassengerTypeCodeInfant,
 			},
 			Age:  sdk.MakeAge("2017-01-09"),
 			Name: sdk.MakeName("MR", "Vladimir", "Doe", ""),
@@ -178,14 +178,14 @@ func main() {
 			ResponseID: "UNKNOWN",
 			Offers: &sdk.Offers{
 				Offer: []*sdk.Offer{
-					&sdk.Offer{
+					{
 						OfferID: &sdk.OfferID{
 							Owner: "S7",
 							Value: "UNKNOWN",
 						},
 						OfferItems: &sdk.OfferItems{
 							OfferItem: []*sdk.OfferItem{
-								&sdk.OfferItem{
+								{
 									OfferItemID: &sdk.OfferID{
 										Owner: "S7",
 										Value: "UNKNOWN",
@@ -211,9 +211,9 @@ func main() {
 			OfferItemType: &sdk.OfferItemType{
 				DetailedFlightItem: &sdk.DetailedFlightItem{
 					OriginDestination: []*sdk.OriginDestinationFlight{
-						&sdk.OriginDestinationFlight{
+						{
 							Flight: []*sdk.OriginDestination{
-								&sdk.OriginDestination{
+								{
 									SegmentKey:       "FL1",
 									Departure:        sdk.MakePoint("DME", "2017-08-02", "08:55", ""),
 									Arrival:          sdk.MakePoint("MUC", "2017-08-02", "11:05", "1"),
@@ -222,7 +222,7 @@ func main() {
 									Equipment:        sdk.MakeEquipment("ref", "Airbus A319"),
 									ClassOfService:   sdk.MakeClassOfService(1, "T", "QFLOW"),
 								},
-								&sdk.OriginDestination{
+								{
 									SegmentKey:       "FL2",
 									Departure:        sdk.MakePoint("MUC", "2017-08-02", "15:40", "1"),
 									Arrival:          sdk.MakePoint("HAM", "2017-08-02", "17:00", "1"),
@@ -242,13 +242,13 @@ func main() {
 	request.Body.OrderCreateRQ.Query.DataLists = &sdk.DataLists{
 		ServiceList: &sdk.ServiceList{
 			Service: []*sdk.Service{
-				&sdk.Service{
+				{
 					ID:        "SRV1",
 					ServiceID: sdk.MakeOfferID("S7", "SRV1"),
 					Name:      "Empty",
 					Descriptions: &sdk.Descriptions{
 						Description: []*sdk.Description{
-							&sdk.Description{
+							{
 								Text: "Empty",
 							},
 						},

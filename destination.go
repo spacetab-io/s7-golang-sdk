@@ -1,4 +1,4 @@
-package sdk
+package s7_api_sdk
 
 import (
 	"fmt"

@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	request := sdk.MakeItinReshopRQ()
+	request := sdk.MakeItinReshopRQ(&sdk.ActionType{Context: sdk.ActionTypeContextDiscount, Value: 10})
 
 	request.Body.ItinReshopRQ.Party.Sender.AgentUserSender = sdk.MakeAgentUserSender(
 		"OVB", "OVB902/1OVB2TR",
@@ -19,10 +19,10 @@ func main() {
 		OrderItem: &sdk.OrderItem{
 			FlightItem: &sdk.FlightItem{
 				OriginDestination: []*sdk.OriginDestinationFlight{
-					&sdk.OriginDestinationFlight{
+					{
 						OriginDestinationKey: "OD1",
 						Flight: []*sdk.OriginDestination{
-							&sdk.OriginDestination{
+							{
 								SegmentKey:       "FL1",
 								Departure:        sdk.MakePoint("MUC", "2017-12-27", "10:35", "1"),
 								Arrival:          sdk.MakePoint("DME", "2017-12-27", "15:45", ""),
@@ -32,10 +32,10 @@ func main() {
 							},
 						},
 					},
-					&sdk.OriginDestinationFlight{
+					{
 						OriginDestinationKey: "OD2",
 						Flight: []*sdk.OriginDestination{
-							&sdk.OriginDestination{
+							{
 								SegmentKey:       "FL2",
 								Departure:        sdk.MakePoint("DME", "2018-01-27", "08:30", ""),
 								Arrival:          sdk.MakePoint("MUC", "2018-01-27", "09:40", "1"),
@@ -48,7 +48,7 @@ func main() {
 				},
 				FareDetail: &sdk.FareDetail{
 					FareComponent: []*sdk.FareComponent{
-						&sdk.FareComponent{
+						{
 							Reference: "FL1",
 							FareBasis: &sdk.FareBasis{
 								FareBasisCode: &sdk.FareBasisCode{
@@ -58,7 +58,7 @@ func main() {
 								RBD: "O",
 							},
 						},
-						&sdk.FareComponent{
+						{
 							Reference: "FL2",
 							FareBasis: &sdk.FareBasis{
 								FareBasisCode: &sdk.FareBasisCode{
@@ -81,10 +81,10 @@ func main() {
 
 	request.Body.ItinReshopRQ.Query.Reshop.Actions.Passengers = &sdk.Passengers{
 		Passenger: []*sdk.User{
-			&sdk.User{
+			{
 				ID: "SH1",
 				PTC: &sdk.PTC{
-					Value: sdk.PASSENGER_TYPE_CODE_ADULT,
+					Value: sdk.PassengerTypeCodeAdult,
 				},
 				Name: &sdk.Name{},
 			},

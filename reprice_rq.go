@@ -1,8 +1,10 @@
-package sdk
+package s7_api_sdk
 
 import (
 	"encoding/xml"
 )
+
+const ActionTypeContextDiscount = "discount"
 
 type ItinReshopRQ struct {
 	XMLName  xml.Name `xml:"http://www.iata.org/IATA/EDIST ItinReshopRQ"`

@@ -18,11 +18,11 @@ func main() {
 	request.Body.AirDocIssueRQ.Query.TicketDocQuantity = 1
 
 	request.Body.AirDocIssueRQ.Query.TicketDocInfo = []*sdk.TicketDocInfo{
-		&sdk.TicketDocInfo{
+		{
 			TravelerInfo: &sdk.TravelerInfo{
 				Surname: "CONELLY",
 				Given:   "LILA",
-				PTC:     sdk.PASSENGER_TYPE_CODE_ADULT,
+				PTC:     sdk.PassengerTypeCodeAdult,
 			},
 			BookingReference: &sdk.BookingReference{
 				ObjectKey: "RPH1",
@@ -34,7 +34,7 @@ func main() {
 			},
 			Payments: &sdk.Payments{
 				Payment: []*sdk.Payment{
-					&sdk.Payment{
+					{
 						Type: &sdk.Type{
 							Code: "MS",
 						},
@@ -52,28 +52,28 @@ func main() {
 	}
 
 	request.Body.AirDocIssueRQ.Query.DataLists.CheckedBagAllowanceList.CheckedBagAllowance = []*sdk.CheckedBagAllowance{
-		&sdk.CheckedBagAllowance{
+		{
 			ID:        "BG1",
 			Reference: "SEG1",
 			AllowanceDescription: &sdk.AllowanceDescription{
 				ApplicableParty: "Traveller",
 				Descriptions: &sdk.Descriptions{
 					Description: []*sdk.Description{
-						&sdk.Description{
+						{
 							Text: "0PC",
 						},
 					},
 				},
 			},
 		},
-		&sdk.CheckedBagAllowance{
+		{
 			ID:        "BG2",
 			Reference: "SEG2",
 			AllowanceDescription: &sdk.AllowanceDescription{
 				ApplicableParty: "Traveller",
 				Descriptions: &sdk.Descriptions{
 					Description: []*sdk.Description{
-						&sdk.Description{
+						{
 							Text: "0PC",
 						},
 					},
@@ -83,7 +83,7 @@ func main() {
 	}
 
 	request.Body.AirDocIssueRQ.Query.DataLists.FareList.FareGroup = []*sdk.FareGroup{
-		&sdk.FareGroup{
+		{
 			ID: "ETK",
 			Fare: &sdk.Fare{
 				FareCode: &sdk.FareCode{
@@ -91,17 +91,17 @@ func main() {
 				},
 				FareDetail: &sdk.FareDetail{
 					FareComponent: []*sdk.FareComponent{
-						&sdk.FareComponent{
+						{
 							ID:        "FC1",
 							Reference: "SEG1",
 							PriceBreakdown: &sdk.PriceBreakdown{
 								Price: &sdk.Price{
-									BaseAmount: &sdk.Title{
+									BaseAmount: &sdk.Total{
 										Code:  "RUB",
 										Value: 4830,
 									},
 									FareFiledIn: &sdk.FareFiledIn{
-										BaseAmount: &sdk.Title{
+										BaseAmount: &sdk.BaseAmount{
 											Code:  "EUR",
 											Value: 76.00,
 										},
@@ -114,28 +114,28 @@ func main() {
 										},
 										Breakdown: &sdk.Breakdown{
 											Tax: []*sdk.Tax{
-												&sdk.Tax{
+												{
 													Amount: &sdk.Total{
 														Code:  "RUB",
 														Value: 2794,
 													},
 													TaxCode: "YR",
 												},
-												&sdk.Tax{
+												{
 													Amount: &sdk.Total{
 														Code:  "RUB",
 														Value: 456,
 													},
 													TaxCode: "DE",
 												},
-												&sdk.Tax{
+												{
 													Amount: &sdk.Total{
 														Code:  "RUB",
 														Value: 475,
 													},
 													TaxCode: "OY",
 												},
-												&sdk.Tax{
+												{
 													Amount: &sdk.Total{
 														Code:  "RUB",
 														Value: 1395,
@@ -162,7 +162,7 @@ func main() {
 								},
 							},
 						},
-						&sdk.FareComponent{
+						{
 							ID:        "FC2",
 							Reference: "SEG2",
 							FareBasis: &sdk.FareBasis{
@@ -186,7 +186,7 @@ func main() {
 	}
 
 	request.Body.AirDocIssueRQ.Query.DataLists.FlightSegmentList.FlightSegment = []*sdk.FlightSegment{
-		&sdk.FlightSegment{
+		{
 			SegmentKey:       "SEG1",
 			Departure:        sdk.MakePoint("MUC", "2017-11-17", "10:35", ""),
 			Arrival:          sdk.MakePoint("DME", "2017-11-17", "15:45", ""),
@@ -200,7 +200,7 @@ func main() {
 				MarketingName: "OBSRT",
 			},
 		},
-		&sdk.FlightSegment{
+		{
 			SegmentKey:       "SEG2",
 			Departure:        sdk.MakePoint("DME", "2017-12-17", "08:30", ""),
 			Arrival:          sdk.MakePoint("MUC", "2017-12-17", "09:40", ""),
@@ -218,7 +218,7 @@ func main() {
 
 	request.Body.AirDocIssueRQ.Query.DataLists.InstructionsList = &sdk.InstructionsList{
 		Instruction: []*sdk.Instruction{
-			&sdk.Instruction{
+			{
 				ListKey: "CC",
 				SpecialBookingInstruction: &sdk.SpecialBookingInstruction{
 					Code:       "QUW1725",
@@ -231,7 +231,7 @@ func main() {
 	request.Body.AirDocIssueRQ.Query.DataLists.TermsList = &sdk.TermsList{
 		ID: "TL1",
 		Term: []*sdk.Term{
-			&sdk.Term{
+			{
 				ID:        "T1",
 				Reference: "SEG1",
 				AvailablePeriod: &sdk.AvailablePeriod{
@@ -240,7 +240,7 @@ func main() {
 					},
 				},
 			},
-			&sdk.Term{
+			{
 				ID:        "T2",
 				Reference: "SEG2",
 				AvailablePeriod: &sdk.AvailablePeriod{

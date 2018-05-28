@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	request := sdk.MakeItinReshopRQ()
+	request := sdk.MakeItinReshopRQ(&sdk.ActionType{Context: sdk.ActionTypeContextDiscount, Value: 10})
 
 	request.Body.ItinReshopRQ.Party.Sender.AgentUserSender = sdk.MakeAgentUserSender(
 		"OVB", "OVB902/1OVB2TR",
@@ -19,16 +19,16 @@ func main() {
 		OrderItem: &sdk.OrderItem{
 			FlightItem: &sdk.FlightItem{
 				OriginDestination: []*sdk.OriginDestinationFlight{
-					&sdk.OriginDestinationFlight{
+					{
 						OriginDestinationKey: "OD1",
 						Flight: []*sdk.OriginDestination{
-							&sdk.OriginDestination{
+							{
 								SegmentKey:       "FL1",
 								Departure:        sdk.MakePoint("DME", "2018-09-16", "00:00", ""),
 								Arrival:          sdk.MakePoint("MUC", "2018-09-16", "00:00", ""),
 								MarketingCarrier: sdk.MakeCarrier("S7", "", "797"),
 							},
-							&sdk.OriginDestination{
+							{
 								SegmentKey:       "FL2",
 								Departure:        sdk.MakePoint("MUC", "2018-09-17", "00:00", ""),
 								Arrival:          sdk.MakePoint("HAM", "2018-09-17", "00:00", ""),
@@ -39,7 +39,7 @@ func main() {
 				},
 				FareDetail: &sdk.FareDetail{
 					FareComponent: []*sdk.FareComponent{
-						&sdk.FareComponent{
+						{
 							Reference: "FL1",
 							FareBasis: &sdk.FareBasis{
 								FareBasisCode: &sdk.FareBasisCode{
@@ -48,7 +48,7 @@ func main() {
 								RBD: "Q",
 							},
 						},
-						&sdk.FareComponent{
+						{
 							Reference: "FL2",
 							FareBasis: &sdk.FareBasis{
 								FareBasisCode: &sdk.FareBasisCode{
@@ -70,24 +70,24 @@ func main() {
 
 	request.Body.ItinReshopRQ.Query.Reshop.Actions.Passengers = &sdk.Passengers{
 		Passenger: []*sdk.User{
-			&sdk.User{
+			{
 				ID: "SH1",
 				PTC: &sdk.PTC{
-					Value: sdk.PASSENGER_TYPE_CODE_ADULT,
+					Value: sdk.PassengerTypeCodeAdult,
 				},
 				Name: &sdk.Name{},
 			},
-			&sdk.User{
+			{
 				ID: "SH2",
 				PTC: &sdk.PTC{
-					Value: sdk.PASSENGER_TYPE_CODE_CHILD,
+					Value: sdk.PassengerTypeCodeChild,
 				},
 				Name: &sdk.Name{},
 			},
-			&sdk.User{
+			{
 				ID: "SH3",
 				PTC: &sdk.PTC{
-					Value: sdk.PASSENGER_TYPE_CODE_INFANT,
+					Value: sdk.PassengerTypeCodeInfant,
 				},
 				Name: &sdk.Name{},
 			},
