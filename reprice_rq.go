@@ -27,7 +27,7 @@ type Actions struct {
 
 type ActionType struct {
 	Context string `xml:",attr,omitempty"`
-	Value   int    `xml:",chardata"`
+	Value   string `xml:",chardata"`
 }
 
 func MakeItinReshopRQ(actionType *ActionType) (request *Envelope) {
