@@ -365,15 +365,13 @@ type Term struct {
 }
 
 type AvailablePeriod struct {
-	Earliest *Earliest
-	Latest   *Latest
+	Earliest *Period
+	Latest   *Period
 }
 
-type Latest struct {
+type Period struct {
 	ShortDate string `xml:",attr,omitempty"`
 }
-
-type Earliest struct{}
 
 type Order struct {
 	OrderID           *OfferID
