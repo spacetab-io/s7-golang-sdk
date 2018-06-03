@@ -235,7 +235,7 @@ func main() {
 				Reference: "SG1",
 				AvailablePeriod: &sdk.AvailablePeriod{
 					Earliest: new(sdk.Earliest),
-					Latest: &sdk.Latest{
+					Latest: &sdk.Period{
 						ShortDate: "2018-10-14",
 					},
 				},
@@ -245,7 +245,7 @@ func main() {
 				Reference: "SG2",
 				AvailablePeriod: &sdk.AvailablePeriod{
 					Earliest: new(sdk.Earliest),
-					Latest: &sdk.Latest{
+					Latest: &sdk.Period{
 						ShortDate: "2018-10-14",
 					},
 				},
