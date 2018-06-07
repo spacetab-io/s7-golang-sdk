@@ -22,6 +22,8 @@ type Body struct {
 	ItinReshopRS    *ItinReshopRS    `xml:",omitempty"`
 	AirDocIssueRQ   *AirDocIssueRQ   `xml:",omitempty"`
 	AirDocDisplayRS *AirDocDisplayRS `xml:",omitempty"`
+	OrderCancelRQ   *OrderCancelRQ   `xml:",omitempty"`
+	OrderCancelRS   *OrderCancelRS   `xml:",omitempty"`
 }
 
 type Document struct {
