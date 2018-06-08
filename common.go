@@ -24,6 +24,8 @@ type Body struct {
 	AirDocDisplayRS *AirDocDisplayRS `xml:",omitempty"`
 	OrderCancelRQ   *OrderCancelRQ   `xml:",omitempty"`
 	OrderCancelRS   *OrderCancelRS   `xml:",omitempty"`
+	AirDocVoidRQ    *AirDocVoidRQ    `xml:",omitempty"`
+	AirDocVoidRS    *AirDocVoidRS    `xml:",omitempty"`
 }
 
 type Document struct {

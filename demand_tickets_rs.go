@@ -38,9 +38,9 @@ type UnstructuredFareCalcInfo struct {
 type TicketDocument struct {
 	TicketDocNbr     string
 	Type             *Type
-	NumberofBooklets int
-	DateOfIssue      string
-	CouponInfo       []*CouponInfo
+	NumberofBooklets int           `xml:",omitempty"`
+	DateOfIssue      string        `xml:",omitempty"`
+	CouponInfo       []*CouponInfo `xml:",omitempty"`
 }
 
 type CouponInfo struct {
