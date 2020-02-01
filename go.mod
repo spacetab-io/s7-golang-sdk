@@ -4,7 +4,6 @@ go 1.12
 
 require (
 	github.com/creack/pty v1.1.9 // indirect
-	github.com/davecgh/go-spew v1.1.1
 	github.com/gin-gonic/gin v1.5.0 // indirect
 	github.com/go-playground/universal-translator v0.17.0 // indirect
 	github.com/golang/protobuf v1.3.3 // indirect

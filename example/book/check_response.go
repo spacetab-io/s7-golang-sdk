@@ -2,10 +2,10 @@ package main
 
 import (
 	"encoding/xml"
+	"github.com/davecgh/go-spew/spew"
 	"io/ioutil"
 	"log"
 
-	"github.com/davecgh/go-spew/spew"
 	sdk "github.com/tmconsulting/s7-golang-sdk"
 )
 
@@ -31,5 +31,4 @@ func main() {
 	if err != nil {
 		log.Fatalln(err)
 	}
-	log.Printf("%+v\n", spew.Sdump(env))
 }

@@ -16,17 +16,7 @@ type Filters struct {
 	BookingReferences *BookingReferences
 }
 
-func MakeOrderRetrieveRQ(
-	id,
-	airline,
-	S7AgentName,
-	S7POSType,
-	S7RequestorType,
-	S7Password,
-	S7PseudoCity,
-	S7AgentUserID,
-	S7UserRole string,
-) (request *Envelope) {
+func MakeOrderRetrieveRQ(id, airline string, AgentUserSender AgentUserSender) (request *Envelope) {
 
 	request = &Envelope{
 		Header: new(Header),
@@ -38,15 +28,7 @@ func MakeOrderRetrieveRQ(
 				},
 				Party: &Party{
 					Sender: &Sender{
-						AgentUserSender: MakeS7AgentUserSender(
-							S7AgentName,
-							S7POSType,
-							S7RequestorType,
-							S7Password,
-							S7PseudoCity,
-							S7AgentUserID,
-							S7UserRole,
-						),
+						AgentUserSender: &AgentUserSender,
 					},
 				},
 				Query: &RetrieveQuery{

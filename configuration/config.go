@@ -27,16 +27,12 @@ func Initialization() (*Config, error) {
 
 	conf := new(Config)
 
-
-
-	certificate, err := tls.LoadX509KeyPair(certPath, keyPath)
+	certificate, err := tls.LoadX509KeyPair(conf.Secret.Cert, conf.Secret.Key)
 	if err != nil {
 		return nil, err
 	}
 
 	conf.Certificate = certificate
-
-
 
 	return conf, nil
 }

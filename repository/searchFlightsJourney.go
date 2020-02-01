@@ -2,7 +2,6 @@ package repository
 
 import (
 	"encoding/xml"
-	"github.com/pkg/errors"
 	"github.com/tmconsulting/s7-golang-sdk/structsV052"
 )
 
@@ -21,8 +20,9 @@ func (r *Repository) SearchFlightJourney(logAttributes map[string]string, reques
 	}
 
 	envelope := new(structsV052.Envelope)
+
 	if err := xml.Unmarshal(response, envelope); err != nil {
-		return nil, errors.WithStack(err)
+		return nil, err
 	}
 
 	return envelope, nil

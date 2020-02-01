@@ -2,7 +2,6 @@ package structsV052
 
 import (
 	"encoding/xml"
-	"gitlab.teamc.io/tm-consulting/tmc24/avia/layer3/s7-agent-go/pkg/models"
 )
 
 type AirDocIssueRQ struct {
@@ -91,4 +90,3 @@ func MakeAirDocIssueRQ(AgentUserSender AgentUserSender, version string, query *Q
 		Query: query,
 	}
 }
-
