@@ -2,6 +2,7 @@ package structsV052
 
 import (
 	"encoding/xml"
+	"gitlab.teamc.io/tm-consulting/tmc24/avia/layer3/s7-agent-go/pkg/models"
 )
 
 type AirDocIssueRQ struct {
@@ -77,3 +78,17 @@ type Type struct {
 	Code       string
 	Definition string `xml:",omitempty"`
 }
+
+func MakeAirDocIssueRQ(AgentUserSender AgentUserSender, version string, query *QueryAirDocIssue) *AirDocIssueRQ {
+	return &AirDocIssueRQ{
+		Version:  version,
+		Document: &Document{},
+		Party: &Party{
+			Sender: &Sender{
+				AgentUserSender: &AgentUserSender,
+			},
+		},
+		Query: query,
+	}
+}
+
