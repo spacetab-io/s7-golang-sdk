@@ -146,7 +146,7 @@ func MakeAirShoppingRQ(
 	}
 
 	airShoppingRQ := &AirShoppingRQ{
-		Version:  version, // "1.0" - v0.50, "2.0" - v0.52
+		Version:  Version, // "1.0" - v0.50, "2.0" - v0.52
 		Document: &Document{},
 		Party: &Party{
 			Sender: &Sender{

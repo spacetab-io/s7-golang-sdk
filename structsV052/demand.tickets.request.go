@@ -80,7 +80,7 @@ type Type struct {
 
 func MakeAirDocIssueRQ(AgentUserSender AgentUserSender, version string, query *QueryAirDocIssue) *AirDocIssueRQ {
 	return &AirDocIssueRQ{
-		Version:  version,
+		Version:  Version,
 		Document: &Document{},
 		Party: &Party{
 			Sender: &Sender{

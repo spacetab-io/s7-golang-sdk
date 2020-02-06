@@ -25,7 +25,7 @@ func MakeAirDocVoidRQ(AgentUserSender AgentUserSender, ticketNbr, ticketType str
 		Header: new(Header),
 		Body: &Body{
 			AirDocVoidRQ: &AirDocVoidRQ{
-				Version:  "1.0",
+				Version:  Version,
 				Document: new(Document),
 				Party: &Party{
 					Sender: &Sender{

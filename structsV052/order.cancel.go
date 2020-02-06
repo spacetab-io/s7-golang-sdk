@@ -38,7 +38,7 @@ func MakeOrderCancelRQ(agentSender *AgentUserSender, pnr, airline string) (reque
 		Header: new(Header),
 		Body: &Body{
 			OrderCancelRQ: &OrderCancelRQ{
-				Version:  "1.0",
+				Version:  Version,
 				Document: new(Document),
 				Party: &Party{
 					Sender: &Sender{
