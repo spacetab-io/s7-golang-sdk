@@ -77,3 +77,16 @@ type Type struct {
 	Code       string
 	Definition string `xml:",omitempty"`
 }
+
+func MakeAirDocIssueRQ(AgentUserSender AgentUserSender, version string, query *QueryAirDocIssue) *AirDocIssueRQ {
+	return &AirDocIssueRQ{
+		Version:  Version,
+		Document: &Document{},
+		Party: &Party{
+			Sender: &Sender{
+				AgentUserSender: &AgentUserSender,
+			},
+		},
+		Query: query,
+	}
+}

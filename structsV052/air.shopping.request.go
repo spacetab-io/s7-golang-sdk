@@ -130,3 +130,35 @@ func MakePreference(businessCabinOnly, directPreferences string) *Preference {
 
 	return preference
 }
+
+func MakeAirShoppingRQ(
+	agent *AgentUserSender,
+	query *CoreQuery,
+	version,
+	currency string,
+) *AirShoppingRQ {
+	var parameters *Parameters
+
+	parameters = &Parameters{
+		CurrCodes: &CurrCodes{
+			CurrCode: currency,
+		},
+	}
+
+	airShoppingRQ := &AirShoppingRQ{
+		Version:  Version, // "1.0" - v0.50, "2.0" - v0.52
+		Document: &Document{},
+		Party: &Party{
+			Sender: &Sender{
+				AgentUserSender: agent,
+			},
+		},
+		Parameters: parameters,
+		CoreQuery:  query,
+	}
+	// if qualifiers != nil {
+	// 	airShoppingRQ.Qualifiers = qualifiers
+	// }
+
+	return airShoppingRQ
+}

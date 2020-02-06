@@ -32,3 +32,32 @@ type ResponseOrderCancel struct {
 	OrderCancelProcessing bool
 	OrderReference        string
 }
+
+func MakeOrderCancelRQ(agentSender *AgentUserSender, pnr, airline string) (request *Envelope) {
+	request = &Envelope{
+		Header: new(Header),
+		Body: &Body{
+			OrderCancelRQ: &OrderCancelRQ{
+				Version:  Version,
+				Document: new(Document),
+				Party: &Party{
+					Sender: &Sender{
+						AgentUserSender: agentSender,
+					},
+				},
+				Query: &QueryOrderCancel{
+					BookingReferences: &BookingReferences{
+						BookingReference: []*BookingReference{
+							&BookingReference{
+								ID:        pnr,
+								AirlineID: airline,
+							},
+						},
+					},
+				},
+			},
+		},
+	}
+
+	return
+}
