@@ -5,11 +5,12 @@ import (
 	"context"
 	"crypto/tls"
 	"fmt"
-	"github.com/tmconsulting/s7-golang-sdk/configuration"
-	"github.com/tmconsulting/s7-golang-sdk/publisher"
 	"io/ioutil"
 	"net/http"
 	"time"
+
+	"github.com/tmconsulting/s7-golang-sdk/configuration"
+	"github.com/tmconsulting/s7-golang-sdk/publisher"
 )
 
 type TransportClient struct {
@@ -17,10 +18,11 @@ type TransportClient struct {
 	Config        configuration.Config
 }
 
-func NewTransportClient(p publisher.Publisher) *TransportClient {
+func NewTransportClient(p publisher.Publisher, c configuration.Config) *TransportClient {
 	s := new(TransportClient)
 
 	s.LogsPublisher = p
+	s.Config = c
 
 	return s
 }
@@ -62,6 +64,7 @@ func (s *TransportClient) Request(soapAction string, request []byte, logAttribut
 
 	go func() {
 		res, err := client.Do(req)
+
 		if err != nil {
 			chanEnd <- err
 			return

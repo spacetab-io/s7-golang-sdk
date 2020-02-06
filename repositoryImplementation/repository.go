@@ -1,4 +1,4 @@
-package repository
+package repositoryImplementation
 
 import (
 	"github.com/tmconsulting/s7-golang-sdk/connectionClients"

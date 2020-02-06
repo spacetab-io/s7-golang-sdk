@@ -7,7 +7,7 @@ const (
 )
 
 type User struct {
-	ID              string           `xml:"ObjectKey,attr,omitempty"`
+	ID              string `xml:"ObjectKey,attr,omitempty"`
 	PTC             *PTC
 	Age             *Age             `xml:",omitempty"`
 	Name            *Name            `xml:",omitempty"`

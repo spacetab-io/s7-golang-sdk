@@ -5,34 +5,32 @@ import (
 )
 
 type Config struct {
-	Secret      secret
-	Client      client
+	Secret      Secret
+	Client      Client
 	Certificate tls.Certificate
 }
 
-type secret struct {
+type Secret struct {
 	Cert     string
 	Key      string
 	Login    string
 	Password string
 }
 
-type client struct {
-	URL        string `yaml:"url"`
-	APIVersion string `yaml:"api_version"`
-	Timeout    int64  `yaml:"timeout"`
+type Client struct {
+	URL        string
+	APIVersion string
+	Timeout    int64
 }
 
-func Initialization() (*Config, error) {
+func (c *Config) Initialization(config Config) error {
 
-	conf := new(Config)
-
-	certificate, err := tls.LoadX509KeyPair(conf.Secret.Cert, conf.Secret.Key)
+	certificate, err := tls.LoadX509KeyPair(config.Secret.Cert, config.Secret.Key)
 	if err != nil {
-		return nil, err
+		return err
 	}
 
-	conf.Certificate = certificate
+	c.Certificate = certificate
 
-	return conf, nil
+	return nil
 }

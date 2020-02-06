@@ -1,7 +1,8 @@
-package repository
+package repositoryImplementation
 
 import (
 	"encoding/xml"
+
 	"github.com/tmconsulting/s7-golang-sdk/structsV052"
 )
 

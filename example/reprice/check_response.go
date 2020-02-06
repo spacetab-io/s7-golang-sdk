@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/xml"
-	"github.com/davecgh/go-spew/spew"
 	"io/ioutil"
 	"log"
 
