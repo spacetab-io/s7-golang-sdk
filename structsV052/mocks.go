@@ -27,7 +27,8 @@ var MockADTTax = 1111.0
 
 var MockSeatsLeft = 7
 var MockCodeValue = "Y"
-var MockMarketingName = "S7"
+
+//var MockMarketingName = "S7"
 
 var MockClassOfService = ClassOfService{
 	Code: &Code{
@@ -38,11 +39,11 @@ var MockClassOfService = ClassOfService{
 }
 
 var MockCabinDesignator = "Y"
-var MarketingName = "BASIC ECONOMY"
+var MockMarketingName = "BASIC ECONOMY"
 
 var MockCabinFlightSegment = CabinFlightSegment{
 	CabinDesignator: &MockCabinDesignator,
-	MarketingName:   &MarketingName,
+	MarketingName:   &MockMarketingName,
 }
 
 var MockApplicableFlight = &ApplicableFlight{
@@ -119,7 +120,7 @@ var MockTravelerType = []*TravelerType{{
 			Type:               "",
 			ID:                 "",
 			BirthCountry:       "",
-			DateOfIssue:        "1991-01-02",
+			DateOfIssue:        "1991-02-01",
 			DateOfExpiration:   "",
 			CountryOfResidence: "",
 		},
@@ -291,15 +292,70 @@ var MockAirlineOffer = &AirlineOffer{
 					},
 					Associations: []*Associations{
 						{
-							AssociatedTraveler: nil,
+							AssociatedTraveler: &AssociatedTraveler{
+								TravelerReferences: "SH1",
+							},
 							ApplicableFlight: &ApplicableFlight{FlightSegmentReference: []*FlightSegmentReference{
 								{
 									Reference: "SEG1",
+									Cabin: &CabinFlightSegment{
+										CabinDesignator: &MockCodeValue,
+										MarketingName:   &MockMarketingName,
+									},
+									ClassOfService: &ClassOfService{
+										Code: &Code{
+											SeatsLeft: &MockSeatsLeft,
+											Value:     &MockCodeValue,
+										},
+										MarketingName: &MockMarketingName,
+									},
+									BagDetailAssociation: &BagDetailAssociation{
+										CheckedBagReferences: "",
+										CarryOnReferences:    "",
+									},
+								},
+								{
+									Reference: "SEG1",
+									Cabin: &CabinFlightSegment{
+										CabinDesignator: &MockCodeValue,
+										MarketingName:   &MockMarketingName,
+									},
+									ClassOfService: &MockClassOfService,
+									BagDetailAssociation: &BagDetailAssociation{
+										CheckedBagReferences: "",
+										CarryOnReferences:    "",
+									},
 								},
 							},
 							},
 							OtherAssociation: nil,
-							Passengers:       nil,
+							Passengers: &Passengers{
+								Passenger: []*TravelerType{{
+									PTC: &PTC{
+										Quantity: 1,
+										Value:    "ADT",
+									},
+									Age:             nil,
+									Name:            nil,
+									Contacts:        nil,
+									Gender:          "",
+									PassengerIDInfo: nil,
+									ID:              "",
+								}, {
+									PTC: &PTC{
+										Quantity: 1,
+										Value:    "CHD",
+									},
+									Age:             nil,
+									Name:            nil,
+									Contacts:        nil,
+									Gender:          "",
+									PassengerIDInfo: nil,
+									ID:              "",
+								}},
+								PassengerReference:  "SH1",
+								PassengerReferences: "SH1",
+							},
 						},
 					},
 				},
@@ -536,7 +592,7 @@ var MockOfferItem = OfferItem{
 		DetailedFlightItem: &DetailedFlightItem{
 			OriginDestination: []*OriginDestination{{
 				ID:               "",
-				Refs:             "",
+				Refs:             "SEG1",
 				SegmentKey:       "",
 				Status:           nil,
 				Departure:        nil,
@@ -548,7 +604,7 @@ var MockOfferItem = OfferItem{
 				CabinType:        nil,
 				ClassOfService:   nil,
 				Flight: &Flight{
-					SegmentKey: "",
+					SegmentKey: "SEG1",
 					Status:     nil,
 					Departure: &Point{
 						AirportCode: "",
@@ -570,7 +626,12 @@ var MockOfferItem = OfferItem{
 						AirlineID:    "",
 						FlightNumber: "",
 					},
-					CabinType: nil,
+					CabinType: &CabinType{
+						Code: &Code{
+							SeatsLeft: nil,
+							Value:     &codeValue,
+						},
+					},
 					ClassOfService: &ClassOfService{
 						Code: &Code{
 							SeatsLeft: nil,
@@ -598,7 +659,7 @@ var MockFlightSegmentList = FlightSegmentList{[]*FlightSegment{
 	},
 }}
 
-var codeValue = "W"
+var codeValue = "Y"
 
 var MockOrderItem = OrderItem{
 	FlightItem: &FlightItem{
@@ -634,8 +695,13 @@ var MockOrderItem = OrderItem{
 					},
 					MarketingCarrier: nil,
 					OperatingCarrier: nil,
-					CabinType:        nil,
-					ClassOfService:   nil,
+					CabinType: &CabinType{
+						Code: &Code{
+							SeatsLeft: nil,
+							Value:     &MockCodeValue,
+						},
+					},
+					ClassOfService: nil,
 				},
 			},
 		},
@@ -645,3 +711,28 @@ var MockOrderItem = OrderItem{
 	OrderItemID:  nil,
 	Associations: nil,
 }
+
+var MockPaxSegmentsAssociations = PaxSegmentsAssociations{SegmentPax: map[string]*SegmentPax{
+	"SEG1": {
+		ADT: &FlightSegmentReference{
+			Reference: "SEG1",
+			Cabin: &CabinFlightSegment{
+				CabinDesignator: &MockCodeValue,
+				MarketingName:   &MockMarketingName,
+			},
+			ClassOfService: &ClassOfService{
+				Code: &Code{
+					SeatsLeft: &MockSeatsLeft,
+					Value:     &MockCodeValue,
+				},
+				MarketingName: &MockCodeValue,
+			},
+			BagDetailAssociation: &BagDetailAssociation{
+				CheckedBagReferences: "",
+				CarryOnReferences:    "",
+			},
+		},
+		CHD: nil,
+		INF: nil,
+	},
+}}
