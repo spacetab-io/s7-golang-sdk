@@ -477,20 +477,36 @@ var MockTravelers = Travelers{
 
 var MockPassengerOrderViewRS = []PassengerOrderViewRS{
 	{
-		ObjectKey:       "SH1",
-		PTC:             nil,
-		Age:             nil,
-		Name:            nil,
-		Gender:          "",
-		PassengerIDInfo: nil,
+		ObjectKey: "SH2",
+		PTC:       nil,
+		Age:       nil,
+		Name:      nil,
+		Gender:    "",
+		PassengerIDInfo: &PassengerIDInfo{
+			PassengerDocument: &PassengerDocument{
+				Type:               "",
+				ID:                 "800",
+				BirthCountry:       "",
+				DateOfIssue:        "",
+				DateOfExpiration:   "",
+				CountryOfResidence: "",
+			}},
 	},
 	{
-		ObjectKey:       "SH2",
-		PTC:             nil,
-		Age:             nil,
-		Name:            nil,
-		Gender:          "",
-		PassengerIDInfo: nil,
+		ObjectKey: "SH3",
+		PTC:       nil,
+		Age:       nil,
+		Name:      nil,
+		Gender:    "",
+		PassengerIDInfo: &PassengerIDInfo{
+			PassengerDocument: &PassengerDocument{
+				Type:               "",
+				ID:                 "900",
+				BirthCountry:       "",
+				DateOfIssue:        "",
+				DateOfExpiration:   "",
+				CountryOfResidence: "",
+			}},
 	},
 }
 
@@ -500,6 +516,10 @@ var MockOrderViewResponse = OrderViewResponse{
 	Passengers: &PassengerOrderRS{
 		Passenger: MockPassengerOrderViewRS,
 	},
+}
+
+var MockOrderViewRS = OrderViewRS{
+	Response: &MockOrderViewResponse,
 }
 
 var MockFlighSegmentList = FlightSegmentList{[]*FlightSegment{

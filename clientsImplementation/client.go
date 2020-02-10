@@ -80,14 +80,12 @@ func (s *TransportClient) Request(soapAction string, request []byte, logAttribut
 		chanEnd <- nil
 
 		if logAttributes != nil {
-
-			if logAttributes != nil {
-				err = s.LogsPublisher.PublishLogs(logAttributes, request, response)
-				if err != nil {
-					chanEnd <- err
-				}
+			err = s.LogsPublisher.PublishLogs(logAttributes, request, response)
+			if err != nil {
+				chanEnd <- err
 			}
 		}
+
 		chanEnd <- err
 	}()
 
@@ -99,7 +97,7 @@ func (s *TransportClient) Request(soapAction string, request []byte, logAttribut
 		}
 	case <-chanEnd:
 		{
-			return nil, err
+			//return nil, err
 		}
 	}
 
