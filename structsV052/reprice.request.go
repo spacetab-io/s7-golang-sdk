@@ -4,8 +4,9 @@ const ActionTypeContextDiscount = "discount"
 
 type ItinReshopRQ struct {
 	// XMLName    xml.Name `xml:"http://www.iata.org/IATA/EDIST ItinReshopRQ"`
-	Xmlns      string `xml:"xmlns,attr"`
-	Version    string `xml:"Version,attr"`
+	Xmlns      string      `xml:"xmlns,attr"`
+	Version    string      `xml:"Version,attr"`
+	Qualifiers *Qualifiers `xml:",omitempty"`
 	Document   *Document
 	Party      *Party
 	Query      *QueryItinReshop
