@@ -110,28 +110,12 @@ type FlightItem struct {
 	FareDetail *FareDetail
 }
 
-func MakeOrderCreateRQ(
-	agent *AgentUserSender,
-	query *QueryOrderCreate,
-	version string,
-) *OrderCreateRQ {
-	return &OrderCreateRQ{
-		Version:  Version, // "1.0" - v0.50, "2.0" - v0.52
-		Document: &Document{},
-		Party: &Party{
-			Sender: &Sender{
-				AgentUserSender: agent,
-			},
-		},
-		Query: query,
-	}
-}
-
 func MakeBookingRequestShoppingResponse(
-	owner string,
+	owner, version string,
 	passengerReferences,
 	flightReferences []string,
-) *ShoppingResponse {
+	agent AgentUserSender,
+) *OrderCreateRQ {
 	var passengerReferenceStr, flightReferencesStr string
 	// Construct PassengerReference
 	for _, passengerRef := range passengerReferences {
@@ -179,5 +163,27 @@ func MakeBookingRequestShoppingResponse(
 		},
 	}
 
-	return shoppingResponse
+	order := OrderCreateRQ{
+		Version:  version, // "1.0" - v0.50, "2.0" - v0.52
+		Document: &Document{},
+		Party: &Party{
+			Sender: &Sender{
+				AgentUserSender: &agent,
+			},
+		},
+		Query: &QueryOrderCreate{
+			Passengers: nil,
+			OrderItems: &OrderItems{
+				ShoppingResponse: shoppingResponse,
+				OrderItem:        nil,
+				OfferItem:        nil,
+			},
+			TicketDocQuantity: 0,
+			TicketDocInfo:     nil,
+			DataLists:         nil,
+			Reshop:            nil,
+		},
+	}
+
+	return &order
 }
