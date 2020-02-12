@@ -96,7 +96,9 @@ var MockPriceDetail = &PriceDetail{
 	Fees: nil,
 }
 
-var MockTravelerType = []*TravelerType{{
+var MockTravelersType = []*TravelerType{&MockTraveler}
+
+var MockTraveler = TravelerType{
 	PTC: &PTC{
 		Quantity: 0,
 		Value:    "ADT",
@@ -126,7 +128,71 @@ var MockTravelerType = []*TravelerType{{
 		},
 	},
 	ID: "SH1",
-}}
+}
+
+var MockTravelerEmpty = TravelerType{
+	PTC: &PTC{
+		Quantity: 0,
+		Value:    "ADT",
+	},
+	Age: &Age{BirthDate: "1991-01-01"},
+	Name: &Name{
+		Surname: "",
+		Given:   "",
+		Title:   "",
+		Middle:  "",
+	},
+	Contacts: &Contacts{
+		Contact: []*Contact{{
+			EmailContact: nil,
+			PhoneContact: nil,
+		}},
+	},
+	Gender: "",
+	PassengerIDInfo: &PassengerIDInfo{
+		PassengerDocument: &PassengerDocument{
+			Type:               "",
+			ID:                 "",
+			BirthCountry:       "",
+			DateOfIssue:        "1991-02-01",
+			DateOfExpiration:   "",
+			CountryOfResidence: "",
+		},
+	},
+	ID: "SH1",
+}
+
+var MockTravelerFULL = TravelerType{
+	PTC: &PTC{
+		Quantity: 1,
+		Value:    "ADT",
+	},
+	Age: &Age{BirthDate: "1991-01-01"},
+	Name: &Name{
+		Surname: "TEST",
+		Given:   "",
+		Title:   "",
+		Middle:  "",
+	},
+	Contacts: &Contacts{
+		Contact: []*Contact{{
+			EmailContact: nil,
+			PhoneContact: nil,
+		}},
+	},
+	Gender: "Female",
+	PassengerIDInfo: &PassengerIDInfo{
+		PassengerDocument: &PassengerDocument{
+			Type:               "PP",
+			ID:                 "666",
+			BirthCountry:       "RU",
+			DateOfIssue:        "1991-02-02",
+			DateOfExpiration:   "2040-01-02",
+			CountryOfResidence: "RU",
+		},
+	},
+	ID: "SH1",
+}
 
 var mockTotalPrice = TotalPrice{
 	DetailCurrencyPrice: &DetailCurrencyPrice{
@@ -518,6 +584,22 @@ var MockOrderViewResponse = OrderViewResponse{
 	},
 }
 
+var MockOrderViewResponseReshop = OrderViewResponse{
+	Passengers: nil,
+	Order: &Order{
+		OrderID:           nil,
+		BookingReferences: nil,
+		TimeLimits:        nil,
+		OrderItems: &OrderItemsRS{
+			OrderItem: []*OrderItem{&MockOrderItem},
+		},
+	},
+	ReShopOffers:         nil,
+	DataList:             nil,
+	TicketDocInfos:       nil,
+	ItinReshopProcessing: nil,
+}
+
 var MockOrderViewRS = OrderViewRS{
 	Response: &MockOrderViewResponse,
 }
@@ -681,51 +763,95 @@ var MockFlightSegmentList = FlightSegmentList{[]*FlightSegment{
 
 var codeValue = "Y"
 
-var MockOrderItem = OrderItem{
-	FlightItem: &FlightItem{
-		Reference: "",
-		OriginDestination: []*OriginDestination{
-			{
-				ID:               "",
-				Refs:             "",
-				SegmentKey:       "",
-				Status:           nil,
-				Departure:        nil,
-				Arrival:          nil,
-				MarketingCarrier: nil,
-				OperatingCarrier: nil,
-				CalendarDates:    nil,
-				Equipment:        nil,
-				CabinType:        nil,
-				ClassOfService:   nil,
-				Flight: &Flight{
-					SegmentKey: "",
-					Status:     nil,
-					Departure: &Point{
-						AirportCode: "",
-						Date:        "2006-01-02",
-						Time:        "15:04",
-						Terminal:    nil,
-					},
-					Arrival: &Point{
-						AirportCode: "",
-						Date:        "2006-01-08",
-						Time:        "15:04",
-						Terminal:    nil,
-					},
-					MarketingCarrier: nil,
-					OperatingCarrier: nil,
-					CabinType: &CabinType{
-						Code: &Code{
-							SeatsLeft: nil,
-							Value:     &MockCodeValue,
-						},
-					},
-					ClassOfService: nil,
+var MockFareComponents = []*FareComponent{&MockFareComponent}
+
+var MockFareComponent = FareComponent{
+	ID:         "FL1",
+	Refs:       "FL1",
+	Parameters: nil,
+	FareBasis: &FareBasis{
+		FareBasisCode: &FareBasisCode{
+			Code:        "F",
+			Application: "",
+		},
+		RBD: "Y",
+	},
+	TicketDesig: nil,
+}
+
+var MockOrderItemsSlice = []*OrderItem{&MockOrderItem}
+
+var MockOriginDestinations = []*OriginDestination{&MockOriginDestination}
+
+var MockOriginDestination = OriginDestination{
+	ID:               "",
+	Refs:             "",
+	SegmentKey:       "",
+	Status:           nil,
+	Departure:        nil,
+	Arrival:          nil,
+	MarketingCarrier: nil,
+	OperatingCarrier: nil,
+	CalendarDates:    nil,
+	Equipment:        nil,
+	CabinType:        nil,
+	ClassOfService:   nil,
+	Flight:           nil,
+}
+
+var OriginalDestinations = []*OriginDestination{
+	{
+		ID:               "",
+		Refs:             "",
+		SegmentKey:       "FL1",
+		Status:           nil,
+		Departure:        nil,
+		Arrival:          nil,
+		MarketingCarrier: nil,
+		OperatingCarrier: nil,
+		CalendarDates:    nil,
+		Equipment:        nil,
+		CabinType:        nil,
+		ClassOfService:   nil,
+		Flight: &Flight{
+			SegmentKey: "FL1",
+			Status:     nil,
+			Departure: &Point{
+				AirportCode: "",
+				Date:        "2006-01-02",
+				Time:        "15:04",
+				Terminal:    nil,
+			},
+			Arrival: &Point{
+				AirportCode: "",
+				Date:        "2006-01-08",
+				Time:        "15:04",
+				Terminal:    nil,
+			},
+			MarketingCarrier: nil,
+			OperatingCarrier: nil,
+			CabinType: &CabinType{
+				Code: &Code{
+					SeatsLeft: nil,
+					Value:     &MockCodeValue,
 				},
 			},
+			ClassOfService: &ClassOfService{
+				Code: &Code{
+					SeatsLeft: nil,
+					Value:     &MockCodeValue,
+				},
+				MarketingName: nil,
+			},
 		},
-		FareDetail: nil,
+	},
+}
+
+var MockOrderItem = OrderItem{
+	FlightItem: &FlightItem{
+		Reference:         "",
+		OriginDestination: OriginalDestinations,
+		FareDetail:        nil,
 	},
 
 	OrderItemID:  nil,
